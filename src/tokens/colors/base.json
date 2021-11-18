@@ -1,0 +1,27 @@
+{
+  "color": {
+    "red": {
+      "500": {
+        "value": "255, 0, 0"
+      },
+      "600": {
+        "value": "255, 100, 0"
+      }
+    },
+    "blue": {
+      "500": {
+        "value": "0, 255, 0"
+      }
+    },
+    "primary": {
+      "500": {
+        "value": "{color.blue.500.value}"
+      }
+    },
+    "warning": {
+      "500": {
+        "value": "{color.red.500.value}"
+      }
+    }
+  }
+}
