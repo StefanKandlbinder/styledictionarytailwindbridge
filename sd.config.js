@@ -110,12 +110,6 @@ module.exports = {
         options: {
           outputReferences: true, // new setting, if true will use variable references
         }
-      }, {
-        destination: 'tokens.scss',
-        format: 'scss/variables',
-        options: {
-          outputReferences: true, // new setting, if true will use variable references
-        }
       }]
     }
   }
