@@ -1,16 +1,18 @@
 <h2 class="mt-4 mb-6 uppercase text-2xl font-bold text-primary-500">Color Palette</h2>
-<ul class="flex flex-col overflow-x-auto pb-6">
+<ul class="flex flex-col overflow-x-auto pb-6 ">
   <li class="flex mt-4" *ngFor="let color of colors">
-    <div class="px-2 flex bg-gray-100 sticky left-0 items-center shadow-lg">
-      <div class="text-sm text-gray-400 w-20 flex-shrink-0">{{ color[0].attributes.type }}</div>
+    <div class="flex bg-gray-100 sticky left-0 items-center shadow-lg">
+      <div class="px-2 text-sm text-gray-400 w-20 flex-shrink-0">{{ color[0].attributes.type }}</div>
     </div>
     <ul class="flex ml-2">
       <li class="flex mr-2" *ngFor="let hue of color">
         <div
           title="Hue: {{ hue.attributes.item }} / RGB Value: {{ hue.value }}"
-          class="flex w-8 h-8 bg-{{hue.attributes.type}}-{{hue.attributes.item}}">
+          class="flex w-8 h-8 bg-{{ hue.attributes.type }}-{{ hue.attributes.item }}">
         </div>
       </li>
     </ul>
   </li>
 </ul>
+
+<h2 class="mt-8 mb-6 uppercase text-2xl font-bold text-primary-500">Spacings</h2>

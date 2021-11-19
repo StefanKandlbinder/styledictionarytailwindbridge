@@ -2,6 +2,7 @@ const colors = require("./src/assets/styles/color.tokens.js")
 // const colors = require('tailwindcss/colors')
 
 module.exports = {
+  // mode: "jit",
   purge: {
     // enabled: true,
     content: [
