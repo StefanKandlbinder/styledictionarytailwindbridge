@@ -19,6 +19,11 @@
         "value": "0, 0, 255"
       }
     },
+    "gray": {
+      "500": {
+        "value": "150, 150, 150"
+      }
+    },
     "primary": {
       "500": {
         "value": "{color.green.500.value}"

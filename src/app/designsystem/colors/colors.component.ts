@@ -8,10 +8,10 @@ import { TokensService } from '../tokens.service';
 })
 export class ColorsComponent implements OnInit {
   tokens!: any;
-  colors!: {};
+  colors!: any[];
   colorKeys!: string[];
   colorHues!: any;
-  // colorValue: any;
+  colorValue: any;
 
   constructor(private tokensService: TokensService) {
   }
@@ -27,14 +27,24 @@ export class ColorsComponent implements OnInit {
   }
 
   getColorTokens() {
-    this.colors = Object.entries(this.tokens.color);
-    /* for (const [key, value] of Object.entries(this.tokens.color)) {
-      console.log(`${key}: ${value}`);
-    } */
+    let colors:any[] = [];
     this.colorKeys = Object.keys(this.tokens.color);
-    this.colorHues = Object.entries(this.tokens.color.red);
-    // this.colorValue = Object.values(this.tokens.color.red.toString(500).value);
+    this.colorKeys.map(key => {
+      let colorHues = Object.entries(this.tokens.color[key]);
+      // let color = {[key]: []};
+      let hues:Object[] = [];
 
-    console.log(this.colorKeys, this.colorHues);
+      colorHues.map(hue => {
+        let tmpKey = hue[0];
+        let tmpHue = hue[1] as Object;
+        hues.push(tmpHue);
+      })
+      // Object.assign(color[key], hues);
+      colors.push(hues);
+      // this.colors.push(colorValue);
+    })
+
+    this.colors = colors;
+    console.log(colors);
   }
 }

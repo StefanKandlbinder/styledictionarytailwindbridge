@@ -1,12 +1,12 @@
 <h2 class="mt-4 font-bold">Color Palette</h2>
 <ul>
-  <li class="flex mt-4 items-center" *ngFor="let colorKey of colorKeys">
-    <div class="text-sm opacity-50 w-16">{{ colorKey }}</div>
+  <li class="flex mt-4 items-center" *ngFor="let color of colors">
+    <div class="text-sm opacity-50 w-16">{{ color[0].attributes.type }}</div>
     <ul class="flex">
-      <li class="flex mr-2" *ngFor="let colorHue of colorHues">
+      <li class="flex mr-2" *ngFor="let hue of color">
         <div
-          title="Hue: {{ colorHue[0] }} / RGB Value: {{ colorHue[1].value }}"
-          class="rounded flex w-8 h-8 bg-{{colorHue[1].attributes.type}}-{{colorHue[1].attributes.item}}">
+          title="Hue: {{ hue.attributes.item }} / RGB Value: {{ hue.value }}"
+          class="rounded flex w-8 h-8 bg-{{hue.attributes.type}}-{{hue.attributes.item}}">
         </div>
       </li>
     </ul>
