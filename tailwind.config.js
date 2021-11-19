@@ -1,11 +1,14 @@
-const colors = require("./build/color.tokens.js")
+const colors = require("./src/assets/styles/color.tokens.js")
 // const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: [
-    './src/**/*.html',
-    './src/**/*.ts'
-  ],
+  purge: {
+    // enabled: true,
+    content: [
+      './src/**/*.html',
+      './src/**/*.ts'
+    ]
+  },
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {

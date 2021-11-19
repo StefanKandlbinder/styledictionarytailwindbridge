@@ -6,7 +6,8 @@ module.exports = {
         return token.attributes.category === "color"
       })
 
-      const uniqueTypes = colorsArray.map(item => item.attributes.type)
+      const uniqueTypes = colorsArray
+        .map(item => item.attributes.type)
         .filter((value, index, self) => self.indexOf(value) === index)
 
       let colors = "module.exports = {"
@@ -15,8 +16,6 @@ module.exports = {
         colors += `${uniqueType}: {`;
 
         colorsArray.map((token) => {
-          console.log(token);
-
           let value = "--one-" + token.name;
           let type = token.attributes.type;
           let item = token.attributes.item;
@@ -69,14 +68,15 @@ module.exports = {
   source: ['src/tokens/**/*.json', '!src/tokens/tailwind/*.json'],
   platforms: {
     json: {
-      buildPath: 'build/',
+      buildPath: 'src/assets/styles/',
+      transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
       files: [{
         destination: 'tokens.json',
-        format: 'json/nested'
+        format: 'json'
       }]
     },
     jsCustom: {
-      buildPath: 'build/',
+      buildPath: 'src/assets/styles/',
       transformGroup: 'js',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
       files: [{
@@ -88,7 +88,7 @@ module.exports = {
       }]
     },
     js: {
-      buildPath: 'build/',
+      buildPath: 'src/assets/styles/',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
       transformGroup: 'js',
       files: [{
@@ -102,7 +102,7 @@ module.exports = {
     css: {
       transformGroup: 'css',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
-      buildPath: 'build/',
+      buildPath: 'src/assets/styles/',
       prefix: "one",
       files: [{
         destination: 'tokens.css',

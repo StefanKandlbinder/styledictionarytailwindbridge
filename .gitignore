@@ -8,6 +8,13 @@
 # Only exists if Bazel was run
 /bazel-out
 
+# assets
+src/assets/styles/color.tokens.js
+src/assets/styles/tokens.css
+src/assets/styles/tokens.json
+src/assets/styles/tokens.scss
+src/assets/styles/tokensModule.js
+
 # dependencies
 /node_modules
 
@@ -45,3 +52,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# storybook
+documentation.json

@@ -2,20 +2,26 @@
   "color": {
     "red": {
       "500": {
-        "value": "255, 0, 0"
+        "value": "255, 0, 0",
+        "comment": "one color red"
       },
       "600": {
         "value": "255, 100, 0"
       }
     },
-    "blue": {
+    "green": {
       "500": {
         "value": "0, 255, 0"
       }
     },
+    "blue": {
+      "500": {
+        "value": "0, 0, 255"
+      }
+    },
     "primary": {
       "500": {
-        "value": "{color.blue.500.value}"
+        "value": "{color.green.500.value}"
       }
     },
     "warning": {
