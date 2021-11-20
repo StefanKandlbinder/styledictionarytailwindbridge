@@ -1,0 +1,46 @@
+/**
+ * Do not edit directly
+ * Generated on Sat, 20 Nov 2021 17:46:23 GMT
+ */
+
+:root {
+  --one-spacing-2: 0.5rem;
+  --one-spacing-1: 0.25rem;
+  --one-spacing-0: 0px;
+  --one-color-gray-900: 70, 70, 70;
+  --one-color-gray-800: 90, 90, 90;
+  --one-color-gray-700: 110, 110, 110;
+  --one-color-gray-600: 130, 130, 130;
+  --one-color-gray-500: 150, 150, 150;
+  --one-color-gray-400: 170, 170, 170;
+  --one-color-gray-300: 190, 190, 190;
+  --one-color-gray-200: 220, 220, 220;
+  --one-color-gray-100: 248, 248, 248;
+  --one-color-warning-900: 255, 72, 0;
+  --one-color-warning-800: 255, 84, 0;
+  --one-color-warning-700: 255, 96, 0;
+  --one-color-warning-600: 255, 109, 0;
+  --one-color-warning-500: 255, 121, 0;
+  --one-color-warning-400: 255, 133, 0;
+  --one-color-warning-300: 255, 145, 0;
+  --one-color-warning-200: 255, 158, 0;
+  --one-color-warning-100: 255, 170, 0;
+  --one-color-accent-900: 20, 116, 111;
+  --one-color-accent-800: 36, 130, 119;
+  --one-color-accent-700: 53, 143, 128;
+  --one-color-accent-600: 70, 157, 137;
+  --one-color-accent-500: 86, 171, 145;
+  --one-color-accent-400: 103, 185, 154;
+  --one-color-accent-300: 120, 198, 163;
+  --one-color-accent-200: 136, 212, 171;
+  --one-color-accent-100: 153, 226, 180;
+  --one-color-primary-900: 3, 4, 94;
+  --one-color-primary-800: 2, 62, 138;
+  --one-color-primary-700: 0, 119, 182;
+  --one-color-primary-600: 0, 150, 199;
+  --one-color-primary-500: 0, 180, 216;
+  --one-color-primary-400: 72, 202, 228;
+  --one-color-primary-300: 144, 224, 239;
+  --one-color-primary-200: 173, 232, 244;
+  --one-color-primary-100: 202, 240, 248;
+}
