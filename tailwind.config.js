@@ -4,7 +4,7 @@ const colors = require("./src/assets/styles/color.tokens.js")
 module.exports = {
   // mode: "jit",
   purge: {
-    // enabled: true,
+    enabled: true,
     content: [
       './src/**/*.html',
       './src/**/*.ts'
