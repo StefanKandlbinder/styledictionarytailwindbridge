@@ -8,17 +8,19 @@ import { TokensService } from '../tokens.service';
 })
 export class ColorsComponent implements OnInit {
   tokens!: any;
-  colors!: any[];
+  colors: any[];
   colorKeys!: string[];
   colorHues!: any;
   colorValue: any;
 
   constructor(private tokensService: TokensService) {
+    this.colors = [];
   }
 
   ngOnInit(): void {
     this.tokensService.getTokens().subscribe(
-      { next: next => {
+      {
+        next: next => {
           this.tokens = next;
           this.getColorTokens();
         }
@@ -27,12 +29,12 @@ export class ColorsComponent implements OnInit {
   }
 
   getColorTokens() {
-    let colors:any[] = [];
+    let colors: any[] = [];
     this.colorKeys = Object.keys(this.tokens.color);
     this.colorKeys.map(key => {
       let colorHues = Object.entries(this.tokens.color[key]);
       // let color = {[key]: []};
-      let hues:Object[] = [];
+      let hues: Object[] = [];
 
       colorHues.map(hue => {
         let tmpKey = hue[0];
@@ -45,6 +47,10 @@ export class ColorsComponent implements OnInit {
     })
 
     this.colors = colors;
-    console.log(colors);
+  }
+
+  getHueValues() {
+    let hues: any[] = this.colors[0];
+    return hues;
   }
 }

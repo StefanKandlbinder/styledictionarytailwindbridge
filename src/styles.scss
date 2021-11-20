@@ -5,6 +5,11 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
+  }
+
   *, ::before, ::after {
     --tw-text-opacity: 1;
     --tw-bg-opacity: 1;
