@@ -6,6 +6,7 @@
 
 @layer base {
   body {
+    @apply text-gray-800;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Playfair Display', serif;
   }
@@ -13,5 +14,22 @@
   *, ::before, ::after {
     --tw-text-opacity: 1;
     --tw-bg-opacity: 1;
+  }
+
+
+  a {
+    @apply text-primary-700;
+
+    &:hover {
+      @apply text-primary-500;
+    }
+  }
+
+  h1 {
+    @apply uppercase text-primary-700 text-6xl;
+  }
+
+  h2 {
+    @apply uppercase text-2xl font-medium text-primary-700;
   }
 }
