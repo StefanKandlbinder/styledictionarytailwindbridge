@@ -8,7 +8,7 @@
       <li class="flex mr-2" *ngFor="let hue of color">
         <div
           title="Hue: {{ hue.attributes.item }} / RGB Value: {{ hue.value }}"
-          class="flex w-8 h-8 bg-{{ hue.attributes.type }}-{{ hue.attributes.item }}">
+          class="flex w-8 h-8 rounded-full bg-{{ hue.attributes.type }}-{{ hue.attributes.item }}">
         </div>
       </li>
     </ul>
