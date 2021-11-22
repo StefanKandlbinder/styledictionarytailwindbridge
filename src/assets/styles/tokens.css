@@ -1,15 +1,18 @@
 /**
  * Do not edit directly
- * Generated on Mon, 22 Nov 2021 19:22:14 GMT
+ * Generated on Mon, 22 Nov 2021 20:12:01 GMT
  */
 
 :root {
-  --one-spacing-20: 5rem;
-  --one-spacing-8: 2rem;
-  --one-spacing-4: 1rem;
-  --one-spacing-3: 0.75rem;
-  --one-spacing-2: 0.5rem;
-  --one-spacing-1: 0.25rem;
+  --one-spacing-px: 1px;
+  --one-spacing-20: 10rem;
+  --one-spacing-12: 6em;
+  --one-spacing-8: 4rem;
+  --one-spacing-6: 3rem;
+  --one-spacing-4: 2rem;
+  --one-spacing-3: 1.5rem;
+  --one-spacing-2: 1rem;
+  --one-spacing-1: 0.5em;
   --one-spacing-0: 0px;
   --one-color-gray-900: 70, 70, 70;
   --one-color-gray-800: 90, 90, 90;

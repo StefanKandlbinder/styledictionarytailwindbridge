@@ -1,30 +1,27 @@
-<h2 class="mt-4 mb-3">Color Palette</h2>
 <ul class="font-sans flex flex-col overflow-x-auto pb-6">
   <li class="flex mt-4">
     <div class="flex bg-gray-100 sticky left-0 items-center justify-center border-r border-gray-200">
-      <div class="px-2 text-sm w-20 flex-shrink-0">hue</div>
+      <div class="w-12 flex-shrink-0">hue</div>
     </div>
     <ul class="flex ml-4">
       <li class="flex mr-2" *ngFor="let hue of getHueValues()" [ngClass]="{'bg-gray-200 bg-opacity-60' : hue.attributes.item == '500'}">
-        <div class="flex items-center justify-center w-8 h-8 text-sm">
+        <div class="flex items-center justify-center w-4 h-4 text-sm">
           {{ hue.attributes.item }}
         </div>
       </li>
     </ul>
   </li>
   <li class="flex" *ngFor="let color of colors">
-    <div class="flex bg-gray-100 sticky left-0 items-center py-4 border-r border-gray-200">
-      <div class="px-2 text-sm w-20 flex-shrink-0">{{ color[0].attributes.type }}</div>
+    <div class="flex bg-gray-100 sticky left-0 items-center py-2 border-r border-gray-200">
+      <div class="w-12 flex-shrink-0">{{ color[0].attributes.type }}</div>
     </div>
     <ul class="flex ml-4">
-      <li class="flex mr-2 py-4" *ngFor="let hue of color" [ngClass]="{'bg-gray-200 bg-opacity-40' : hue.attributes.item == '500'}">
+      <li class="flex mr-2 py-2" *ngFor="let hue of color" [ngClass]="{'bg-gray-200 bg-opacity-40' : hue.attributes.item == '500'}">
         <div
           title="Hue: {{ hue.attributes.item }} / RGB Value: {{ hue.value }}"
           [style.background]="getColorToken(hue)"
-          class="flex w-8 h-8 rounded-full"></div>
+          class="flex w-4 h-4 rounded-full"></div>
       </li>
     </ul>
   </li>
 </ul>
-
-<h2 class="mt-8 mb-6">Spacings</h2>

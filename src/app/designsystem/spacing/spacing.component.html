@@ -1,0 +1,7 @@
+<ul class="font-sans block h-6">
+  <li *ngFor="let spacing of spacings; let i = index" class="relative block">
+    <div class="block absolute" [ngClass]="i % 2 ? 'top-0':'bottom-0'" [style.left]="getSpacingProperty(spacing)">
+      {{ spacing.attributes.type }}
+    </div>
+  </li>
+</ul>
