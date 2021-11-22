@@ -1,10 +1,12 @@
-<ul class="font-sans block h-6 relative top-8">
-  <li *ngFor="let spacing of spacings; let i = index" class="relative block">
-    <div class="block bottom-0 absolute border-r border-warning-500" [ngClass]="i % 2 ? 'h-4':'h-8'"
-      [style.left]="getSpacingProperty(spacing)">
-      <div class="absolute" [ngClass]="i % 2 ? 'top-4':'bottom-8'">
-        {{ spacing.attributes.type }}
+<div class="flex overflow-x-auto h-20">
+  <ul class="font-sans flex h-6 relative top-8">
+    <li *ngFor="let spacing of spacings; let i = index" class="relative block">
+      <div class="block bottom-0 absolute border-r border-warning-500" [ngClass]="i % 2 ? 'h-4':'h-8'"
+        [style.left]="getSpacingProperty(spacing)">
+        <div class="absolute" [ngClass]="i % 2 ? 'top-4':'bottom-8'">
+          {{ spacing.attributes.type }}
+        </div>
       </div>
-    </div>
-  </li>
-</ul>
+    </li>
+  </ul>
+</div>
