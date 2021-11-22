@@ -7,7 +7,7 @@
     "start": "ng serve --host 192.168.1.8 --disable-host-check",
     "build": "ng build",
     "build:sd": "style-dictionary build --config sd.config.js",
-    "watch:sd": "style-dictionary build --config sd.config.js --watch",
+    "watch:sd": "chokidar src/tokens/**/*.json -c 'yarn build:sd'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
@@ -54,6 +54,7 @@
     "postcss": "^8.3.11",
     "style-dictionary": "^3.0.3",
     "tailwindcss": "^2.2.19",
-    "typescript": "~4.4.3"
+    "typescript": "~4.4.3",
+    "chokidar": "~3.5.2"
   }
 }
