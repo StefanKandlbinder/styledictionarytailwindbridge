@@ -1,7 +1,7 @@
 module.exports = {
   format: {
     // Adding a custom format to show how to get an alias's name.
-    customFormat: function ({ dictionary, options }) {
+    customColorFormat: function ({ dictionary, options }) {
       let colorsArray = dictionary.allTokens.filter(token => {
         return token.attributes.category === "color"
       })
@@ -24,24 +24,6 @@ module.exports = {
           let opacityValue = "return `rgba(var(" + value + "), ${opacityValue})`"
           let variable = "return `rgba(var(" + value + "))`"
 
-          // console.log(colors);
-          // new option added to decide whether or not to output references
-          if (options.outputReferences) {
-            // the `dictionary` object now has `usesReference()` and
-            // `getReferences()` methods. `usesReference()` will return true if
-            // the value has a reference in it. `getReferences()` will return
-            // an array of references to the whole tokens so that you can access
-            // their names or any other attributes.
-            if (dictionary.usesReference(token.original.value)) {
-              const refs = dictionary.getReferences(token.original.value);
-              refs.forEach(ref => {
-                value = value.replace(ref.value, function () {
-                  return `${ref.name}`;
-                });
-              });
-            }
-          }
-
           if (uniqueType === type) {
             colors += `
               ${[item]}:
@@ -62,6 +44,27 @@ module.exports = {
       colors += "}"
 
       return colors;
+    },
+    customSpacingsFormat: function ({ dictionary, options }) {
+      let spacingsArray = dictionary.allTokens.filter(token => {
+        return token.attributes.category === "spacing"
+      })
+
+      const uniqueTypes = spacingsArray
+        .map(item => item.attributes.type)
+        .filter((value, index, self) => self.indexOf(value) === index)
+
+      let spacings = "module.exports = {"
+
+      spacingsArray.map((token) => {
+        let value = "--one-" + token.name;
+
+        spacings += `${token.attributes.type}:"var(${value})",`
+      })
+
+      spacings += "}"
+
+      return spacings;
     }
   },
 
@@ -75,13 +78,25 @@ module.exports = {
         format: 'json'
       }]
     },
-    jsCustom: {
+    jsCustomColor: {
       buildPath: 'src/assets/styles/',
       transformGroup: 'js',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
       files: [{
         destination: 'color.tokens.js',
-        format: 'customFormat',
+        format: 'customColorFormat',
+        options: {
+          outputReferences: false
+        }
+      }]
+    },
+    jsCustomSpacing: {
+      buildPath: 'src/assets/styles/',
+      transformGroup: 'js',
+      transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
+      files: [{
+        destination: 'spacing.tokens.js',
+        format: 'customSpacingsFormat',
         options: {
           outputReferences: false
         }

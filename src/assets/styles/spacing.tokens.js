@@ -1,0 +1,1 @@
+module.exports = {0:"var(--one-spacing-0)",1:"var(--one-spacing-1)",2:"var(--one-spacing-2)",3:"var(--one-spacing-3)",4:"var(--one-spacing-4)",8:"var(--one-spacing-8)",20:"var(--one-spacing-20)",}
