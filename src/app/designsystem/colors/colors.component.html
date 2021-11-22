@@ -3,7 +3,7 @@
     <div class="flex bg-gray-100 sticky left-0 items-center justify-center border-r border-gray-200">
       <div class="w-12 flex-shrink-0">hue</div>
     </div>
-    <ul class="flex ml-4">
+    <ul class="flex ml-2">
       <li class="flex mr-2" *ngFor="let hue of getHueValues()" [ngClass]="{'bg-gray-200 bg-opacity-60' : hue.attributes.item == '500'}">
         <div class="flex items-center justify-center w-4 h-4 text-sm">
           {{ hue.attributes.item }}
@@ -15,7 +15,7 @@
     <div class="flex bg-gray-100 sticky left-0 items-center py-2 border-r border-gray-200">
       <div class="w-12 flex-shrink-0">{{ color[0].attributes.type }}</div>
     </div>
-    <ul class="flex ml-4">
+    <ul class="flex ml-2">
       <li class="flex mr-2 py-2" *ngFor="let hue of color" [ngClass]="{'bg-gray-200 bg-opacity-40' : hue.attributes.item == '500'}">
         <div
           title="Hue: {{ hue.attributes.item }} / RGB Value: {{ hue.value }}"
