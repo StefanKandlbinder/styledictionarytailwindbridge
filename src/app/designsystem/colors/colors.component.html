@@ -1,11 +1,12 @@
 <ul class="font-sans flex flex-col overflow-x-auto">
   <li class="flex">
     <div class="flex bg-gray-100 sticky left-0 items-center justify-center border-r border-gray-200">
-      <div class="w-12 flex-shrink-0">hue</div>
+      <div class="w-16 flex-shrink-0">hue</div>
     </div>
     <ul class="flex ml-2">
-      <li class="flex mr-2" *ngFor="let hue of getHueValues()" [ngClass]="{'bg-gray-200 bg-opacity-60' : hue.attributes.item == '500'}">
-        <div class="flex items-center justify-center w-4 h-4 text-sm">
+      <li class="flex mr-2" *ngFor="let hue of getHueValues()"
+        [ngClass]="{'bg-gray-200 bg-opacity-40' : hue.attributes.item == '500'}">
+        <div class="flex items-center justify-center w-8 h-8 text-sm">
           {{ hue.attributes.item }}
         </div>
       </li>
@@ -13,15 +14,41 @@
   </li>
   <li class="flex" *ngFor="let color of colors">
     <div class="flex bg-gray-100 sticky left-0 items-center py-2 border-r border-gray-200">
-      <div class="w-12 flex-shrink-0">{{ color[0].attributes.type }}</div>
+      <div class="w-16 flex-shrink-0">{{ color[0].attributes.type }}
+        <div><code class="text-xs text-gray-500">colors.{{ color[0].attributes.type }}</code></div>
+      </div>
     </div>
     <ul class="flex ml-2">
-      <li class="flex mr-2 py-2" *ngFor="let hue of color" [ngClass]="{'bg-gray-200 bg-opacity-40' : hue.attributes.item == '500'}">
-        <div
-          title="Hue: {{ hue.attributes.item }} / RGB Value: {{ hue.value }}"
-          [style.background]="getColorToken(hue)"
-          class="flex w-4 h-4 rounded-full"></div>
+      <li class="flex flex-col flex-shrink-0 mr-2 py-2" *ngFor="let hue of color"
+        [ngClass]="{'bg-gray-200 bg-opacity-40' : hue.attributes.item == '500'}">
+        <div class="flex flex-col w-8">
+          <div title="Hue: {{ hue.attributes.item }} / RGB Value: {{ hue.value }}" [style.background]="getColorToken(hue)"
+          class="flex w-8 h-8 rounded-full"></div>
+          <div class="mt-1 text-xs text-center text-gray-500">rgb: {{ hue.value }}</div>
+        </div>
       </li>
     </ul>
   </li>
 </ul>
+<!-- <div class="grid grid-cols-1 gap-8">
+  <div>
+    <div *ngFor="let color of colors" class="flex flex-col space-y-2 sm:flex-row text-xs sm:space-y-0 sm:space-x-4 mt-4">
+      <div class="w-32 flex-shrink-0">
+        <div class="h-10 flex flex-col justify-center">
+          <div class="text-sm font-semibold text-gray-900">{{ color[0].attributes.type }}</div>
+          <div><code class="text-xs text-gray-500">colors.{{ color[0].attributes.type }}</code></div>
+        </div>
+      </div>
+      <div class="min-w-0 flex-1 grid grid-cols-4 2xl:grid-cols-10 gap-x-2 gap-y-2 2xl:gap-x-2">
+        <div *ngFor="let hue of color" class="space-y-1.5">
+          <div class="h-12 w-full rounded ring-1 ring-inset ring-black ring-opacity-0"
+          [style.background]="getColorToken(hue)"></div>
+          <div class="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
+            <div class="w-6 font-medium text-gray-900">{{ hue.attributes.item }}</div>
+            <div>RGB ({{ hue.value }})</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
