@@ -1,13 +1,13 @@
 // import customColorFormat from './formats/customColorFormat';
-const customColorFormat = require('./formats/customColorFormat');
-const customSpacingFormat = require('./formats/customSpacingFormat');
+const tailwindColorFormat = require('./formats/tailwindColorFormat');
+const tailwindSpacingFormat = require('./formats/tailwindSpacingFormat');
 
 module.exports = {
   format: {
     // Transforming colors to a tailwind.confing.js color Object
-    customColorFormat: customColorFormat,
+    tailwindColorFormat: tailwindColorFormat,
     // Transforming spacings to a tailwind.confing.js spacing Object
-    customSpacingsFormat: customSpacingFormat
+    tailwindSpacingFormat: tailwindSpacingFormat
   },
 
   source: ['src/styledictionary/tokens/**/*.json', '!src/styledictionary/tokens/tailwind/*.json'],
@@ -26,7 +26,7 @@ module.exports = {
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
       files: [{
         destination: 'color.tokens.js',
-        format: 'customColorFormat',
+        format: 'tailwindColorFormat',
         options: {
           outputReferences: false
         }
@@ -38,7 +38,7 @@ module.exports = {
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
       files: [{
         destination: 'spacing.tokens.js',
-        format: 'customSpacingsFormat',
+        format: 'tailwindSpacingFormat',
         options: {
           outputReferences: false
         }

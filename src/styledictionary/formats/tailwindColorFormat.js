@@ -1,4 +1,4 @@
-const customColorFormat = function ({ dictionary, options }) {
+const tailwindColorFormat = function ({ dictionary, options }) {
   let colorsArray = dictionary.allTokens.filter(token => {
     return token.attributes.category === "color"
   })
@@ -43,4 +43,4 @@ const customColorFormat = function ({ dictionary, options }) {
   return colors;
 }
 
-module.exports = customColorFormat;
+module.exports = tailwindColorFormat;

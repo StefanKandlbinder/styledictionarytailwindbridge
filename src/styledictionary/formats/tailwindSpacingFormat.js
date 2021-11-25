@@ -1,4 +1,4 @@
-const customSpacingFormat = function ({ dictionary, options }) {
+const tailwindSpacingFormat = function ({ dictionary, options }) {
   let spacingsArray = dictionary.allTokens.filter(token => {
     return token.attributes.category === "spacing"
   })
@@ -20,4 +20,4 @@ const customSpacingFormat = function ({ dictionary, options }) {
   return spacings;
 }
 
-module.exports = customSpacingFormat;
+module.exports = tailwindSpacingFormat;
