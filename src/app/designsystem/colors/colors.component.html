@@ -1,12 +1,12 @@
 <ul class="flex flex-col overflow-x-auto">
   <li class="flex">
     <div class="flex bg-gray-100 sticky left-0 items-center justify-center border-r border-gray-200">
-      <div class="w-16 flex-shrink-0">Hue</div>
+      <div class="w-16 flex-shrink-0 font-medium">Hue</div>
     </div>
     <ul class="flex ml-2">
       <li class="flex px-1" *ngFor="let hue of getHueValues()"
         [ngClass]="{'bg-gray-200 bg-opacity-20' : hue.attributes.item == '500'}">
-        <div class="flex items-center justify-center w-16 py-2 text-sm">
+        <div class="flex items-center justify-center w-16 py-2 text-sm font-medium">
           {{ hue.attributes.item }}
         </div>
       </li>
