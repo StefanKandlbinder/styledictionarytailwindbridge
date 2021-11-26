@@ -14,8 +14,8 @@
   </li>
   <li class="flex" *ngFor="let color of colors">
     <div class="flex flex-col bg-gray-100 sticky left-0 items-start py-2 border-r border-gray-200">
-      <div class="w-16 h-8 flex flex-col justify-center flex-shrink-0">{{ color[0].attributes.type }}
-        <div><code class="text-xs text-gray-500">colors.{{ color[0].attributes.type }}</code></div>
+      <div class="w-16 h-6 flex flex-col justify-center flex-shrink-0">{{ color[0].attributes.type }}
+        <code class="text-xs text-gray-500">colors.{{ color[0].attributes.type }}</code>
       </div>
       <div class="mt-1 text-xs text-gray-500">rgb</div>
         <div class="mt-1 text-xs text-gray-500">custom property</div>
@@ -25,7 +25,7 @@
         [ngClass]="{'bg-gray-200 bg-opacity-40' : hue.attributes.item == '500'}">
         <div class="flex flex-col w-16">
           <div title="Hue: {{ hue.attributes.item }} / RGB Value: {{ hue.value }}" [style.background]="getColorToken(hue)"
-          class="flex w-16 h-8 rounded-full"></div>
+          class="flex w-16 h-6 rounded-full"></div>
           <div class="mt-1 text-xs text-center text-gray-500">{{ hue.value }}</div>
           <div class="mt-1 text-xs text-center text-gray-500">--one-{{ hue.name }}</div>
         </div>
