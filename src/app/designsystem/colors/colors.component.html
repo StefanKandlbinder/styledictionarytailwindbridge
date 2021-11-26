@@ -5,7 +5,7 @@
     </div>
     <ul class="flex ml-2">
       <li class="flex px-1" *ngFor="let hue of getHueValues()"
-        [ngClass]="{'bg-gray-200 bg-opacity-40' : hue.attributes.item == '500'}">
+        [ngClass]="{'bg-gray-200 bg-opacity-20' : hue.attributes.item == '500'}">
         <div class="flex items-center justify-center w-16 py-2 text-sm">
           {{ hue.attributes.item }}
         </div>
@@ -22,7 +22,7 @@
     </div>
     <ul class="flex ml-2">
       <li class="flex flex-col flex-shrink-0 py-2 px-1" *ngFor="let hue of color"
-        [ngClass]="{'bg-gray-200 bg-opacity-40' : hue.attributes.item == '500'}">
+        [ngClass]="{'bg-gray-200 bg-opacity-20' : hue.attributes.item == '500'}">
         <div class="flex flex-col w-16">
           <div title="Hue: {{ hue.attributes.item }} / RGB Value: {{ hue.value }}" [style.background]="getColorToken(hue)"
           class="flex w-16 h-6 rounded-full"></div>
