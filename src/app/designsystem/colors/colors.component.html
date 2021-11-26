@@ -1,30 +1,33 @@
-<ul class="font-sans flex flex-col overflow-x-auto">
+<ul class="flex flex-col overflow-x-auto">
   <li class="flex">
     <div class="flex bg-gray-100 sticky left-0 items-center justify-center border-r border-gray-200">
       <div class="w-16 flex-shrink-0">hue</div>
     </div>
     <ul class="flex ml-2">
-      <li class="flex mr-2" *ngFor="let hue of getHueValues()"
+      <li class="flex px-1" *ngFor="let hue of getHueValues()"
         [ngClass]="{'bg-gray-200 bg-opacity-40' : hue.attributes.item == '500'}">
-        <div class="flex items-center justify-center w-8 h-8 text-sm">
+        <div class="flex items-center justify-center w-16 py-2 text-sm">
           {{ hue.attributes.item }}
         </div>
       </li>
     </ul>
   </li>
   <li class="flex" *ngFor="let color of colors">
-    <div class="flex bg-gray-100 sticky left-0 items-center py-2 border-r border-gray-200">
-      <div class="w-16 flex-shrink-0">{{ color[0].attributes.type }}
+    <div class="flex flex-col bg-gray-100 sticky left-0 items-start py-2 border-r border-gray-200">
+      <div class="w-16 h-8 flex flex-col justify-center flex-shrink-0">{{ color[0].attributes.type }}
         <div><code class="text-xs text-gray-500">colors.{{ color[0].attributes.type }}</code></div>
       </div>
+      <div class="mt-1 text-xs text-gray-500">rgb</div>
+        <div class="mt-1 text-xs text-gray-500">custom property</div>
     </div>
     <ul class="flex ml-2">
-      <li class="flex flex-col flex-shrink-0 mr-2 py-2" *ngFor="let hue of color"
+      <li class="flex flex-col flex-shrink-0 py-2 px-1" *ngFor="let hue of color"
         [ngClass]="{'bg-gray-200 bg-opacity-40' : hue.attributes.item == '500'}">
-        <div class="flex flex-col w-8">
+        <div class="flex flex-col w-16">
           <div title="Hue: {{ hue.attributes.item }} / RGB Value: {{ hue.value }}" [style.background]="getColorToken(hue)"
-          class="flex w-8 h-8 rounded-full"></div>
-          <div class="mt-1 text-xs text-center text-gray-500">rgb: {{ hue.value }}</div>
+          class="flex w-16 h-8 rounded-full"></div>
+          <div class="mt-1 text-xs text-center text-gray-500">{{ hue.value }}</div>
+          <div class="mt-1 text-xs text-center text-gray-500">--one-{{ hue.name }}</div>
         </div>
       </li>
     </ul>

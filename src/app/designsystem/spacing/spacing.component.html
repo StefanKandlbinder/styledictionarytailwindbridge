@@ -1,5 +1,5 @@
-<div class="flex overflow-x-auto h-20">
-  <ul class="font-sans flex h-6 relative top-8">
+<!-- <div class="flex overflow-x-auto h-20">
+  <ul class="flex h-6 relative top-8">
     <li *ngFor="let spacing of spacings; let i = index" class="relative block">
       <div class="block bottom-0 absolute border-r border-warning-500" [ngClass]="i % 2 ? 'h-4':'h-8'"
         [style.left]="getSpacingProperty(spacing)">
@@ -9,4 +9,27 @@
       </div>
     </li>
   </ul>
+</div> -->
+
+<div class="block overflow-x-auto">
+  <table>
+    <thead>
+      <tr>
+        <th class="text-left pr-2 pb-2 font-bold">Name</th>
+        <th class="text-left px-2 pb-2">Size</th>
+        <th class="text-left px-2 pb-2 whitespace-nowrap">CSS Custom Property</th>
+        <th class="text-left px-2 pb-2">Preview</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let spacing of spacings; let i = index">
+        <td class="py-1 pr-2 text-sm">{{ spacing.attributes.type }}</td>
+        <td class="py-1 px-2 text-sm">{{ spacing.value }}</td>
+        <td class="py-1 px-2 text-sm whitespace-nowrap">--one-{{ spacing.name }}</td>
+        <td class="py-1 px-2 text-sm">
+          <div class="bg-primary-500 h-4" [style.width]="getSpacingProperty(spacing)"></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
