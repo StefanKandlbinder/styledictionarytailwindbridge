@@ -1,11 +1,13 @@
 /**
  * Do not edit directly
- * Generated on Thu, 25 Nov 2021 15:19:49 GMT
+ * Generated on Fri, 26 Nov 2021 19:44:00 GMT
  */
 
 :root {
+  --one-spacing-48: 24rem;
   --one-spacing-40: 20rem;
   --one-spacing-30: 15rem;
+  --one-spacing-24: 12rem;
   --one-spacing-20: 10rem;
   --one-spacing-16: 8rem;
   --one-spacing-12: 6em;
