@@ -25,7 +25,7 @@
       <tr *ngFor="let spacing of spacings; let i = index">
         <td class="py-1 pr-2 text-sm">{{ spacing.attributes.type }}</td>
         <td class="py-1 px-2 text-sm">{{ spacing.value }}</td>
-        <td class="py-1 px-2 text-sm whitespace-nowrap">--one-{{ spacing.name }}</td>
+        <td class="py-1 px-2 text-sm whitespace-nowrap">--{{ spacing.name }}</td>
         <td class="py-1 px-2 text-sm">
           <div class="bg-primary-300 h-4" [style.width]="getSpacingProperty(spacing)"></div>
         </td>

@@ -1,4 +1,4 @@
-const tailwindColorFormat = function ({ dictionary, options }) {
+const tailwindColorFormatRGB = function ({ dictionary, options }) {
   let colorsArray = dictionary.allTokens.filter(token => {
     return token.attributes.category === "color"
   })
@@ -13,7 +13,7 @@ const tailwindColorFormat = function ({ dictionary, options }) {
     colors += `${uniqueType}: {`;
 
     colorsArray.map((token) => {
-      let value = "--one-" + token.name;
+      let value = "--" + token.name;
       let type = token.attributes.type;
       let item = token.attributes.item;
 
@@ -43,4 +43,4 @@ const tailwindColorFormat = function ({ dictionary, options }) {
   return colors;
 }
 
-module.exports = tailwindColorFormat;
+module.exports = tailwindColorFormatRGB;

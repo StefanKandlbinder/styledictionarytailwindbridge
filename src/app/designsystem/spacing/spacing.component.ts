@@ -35,6 +35,6 @@ export class SpacingComponent implements OnInit {
   }
 
   getSpacingProperty(spacing: any) {
-    return `var(--one-${ spacing.name })`
+    return `var(--${ spacing.name })`
   }
 }

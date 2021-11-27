@@ -27,7 +27,7 @@
           <div title="Hue: {{ hue.attributes.item }} / RGB Value: {{ hue.value }}" [style.background]="getColorToken(hue)"
           class="flex w-16 h-6 rounded-full"></div>
           <div class="mt-2 text-xs text-center text-gray-500">{{ hue.value }}</div>
-          <div class="mt-1 text-xs text-center text-gray-500">--one-{{ hue.name }}</div>
+          <div class="mt-1 text-xs text-center text-gray-500">--{{ hue.name }}</div>
         </div>
       </li>
     </ul>

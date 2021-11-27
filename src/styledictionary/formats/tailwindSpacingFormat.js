@@ -10,7 +10,7 @@ const tailwindSpacingFormat = function ({ dictionary, options }) {
   let spacings = "module.exports = {"
 
   spacingsArray.map((token) => {
-    let value = "--one-" + token.name;
+    let value = "--" + token.name;
 
     spacings += `${token.attributes.type}:"var(${value})",`
   })
