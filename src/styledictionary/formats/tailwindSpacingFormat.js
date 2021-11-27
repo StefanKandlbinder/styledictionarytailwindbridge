@@ -3,10 +3,6 @@ const tailwindSpacingFormat = function ({ dictionary, options }) {
     return token.attributes.category === "spacing"
   })
 
-  const uniqueTypes = spacingsArray
-    .map(item => item.attributes.type)
-    .filter((value, index, self) => self.indexOf(value) === index)
-
   let spacings = "module.exports = {"
 
   spacingsArray.map((token) => {

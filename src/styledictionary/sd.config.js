@@ -28,7 +28,7 @@ module.exports = {
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
       prefix: "one",
       files: [{
-        destination: 'color.tokens.js',
+        destination: 'color.tokens.tailwind.js',
         format: 'tailwindColorFormatRGB',
         options: {
           outputReferences: false
@@ -41,7 +41,7 @@ module.exports = {
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
       prefix: "one",
       files: [{
-        destination: 'spacing.tokens.js',
+        destination: 'spacing.tokens.tailwind.js',
         format: 'tailwindSpacingFormat',
         options: {
           outputReferences: false

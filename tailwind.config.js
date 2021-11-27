@@ -1,5 +1,5 @@
-const colors = require("./src/assets/styles/color.tokens.js")
-const spacing = require("./src/assets/styles/spacing.tokens.js")
+const colors = require("./src/assets/styles/color.tokens.tailwind.js")
+const spacing = require("./src/assets/styles/spacing.tokens.tailwind.js")
 // const colors = require('tailwindcss/colors')
 
 module.exports = {
