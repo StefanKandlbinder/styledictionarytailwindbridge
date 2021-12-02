@@ -1,5 +1,6 @@
 const colors = require("./src/assets/styles/color.tokens.tailwind.js")
 const spacing = require("./src/assets/styles/spacing.tokens.tailwind.js")
+const fontFamily = require("./src/assets/styles/font.family.tokens.tailwind.js")
 // const colors = require('tailwindcss/colors')
 
 module.exports = {
@@ -197,35 +198,7 @@ module.exports = {
       0: '0',
       DEFAULT: '1',
     },
-    fontFamily: {
-      sans: [
-        'ui-sans-serif',
-        'system-ui',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        '"Noto Sans"',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
-      ],
-      serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-      mono: [
-        'ui-monospace',
-        'SFMono-Regular',
-        'Menlo',
-        'Monaco',
-        'Consolas',
-        '"Liberation Mono"',
-        '"Courier New"',
-        'monospace',
-      ],
-    },
+    fontFamily,
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.25rem' }],

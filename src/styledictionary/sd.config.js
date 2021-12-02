@@ -1,6 +1,7 @@
 // import customColorFormat from './formats/customColorFormat';
 const tailwindColorFormatRGB = require('./formats/tailwindColorFormatRGB');
 const tailwindSpacingFormat = require('./formats/tailwindSpacingFormat');
+const tailwindFontFamilyFormat = require('./formats/tailwindFontFamilyFormat');
 
 module.exports = {
   format: {
@@ -8,7 +9,10 @@ module.exports = {
     tailwindColorFormatRGB: tailwindColorFormatRGB,
 
     // Transforming spacings to a tailwind.confing.js spacing Object
-    tailwindSpacingFormat: tailwindSpacingFormat
+    tailwindSpacingFormat: tailwindSpacingFormat,
+
+    // Transforming font families to a tailwind.confing.js fontFamily Object
+    tailwindFontFamilyFormat: tailwindFontFamilyFormat
   },
 
   source: ['src/styledictionary/tokens/**/*.json', '!src/styledictionary/tokens/tailwind/*.json'],
@@ -43,6 +47,19 @@ module.exports = {
       files: [{
         destination: 'spacing.tokens.tailwind.js',
         format: 'tailwindSpacingFormat',
+        options: {
+          outputReferences: false
+        }
+      }]
+    },
+    jsCustomFontFamily: {
+      buildPath: 'src/assets/styles/',
+      transformGroup: 'js',
+      transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
+      prefix: "one",
+      files: [{
+        destination: 'font.family.tokens.tailwind.js',
+        format: 'tailwindFontFamilyFormat',
         options: {
           outputReferences: false
         }

@@ -3952,9 +3952,9 @@ apache-md5@^1.0.6:
   resolved "https://registry.yarnpkg.com/apache-md5/-/apache-md5-1.1.7.tgz#dcef1802700cc231d60c5e08fd088f2f9b36375a"
   integrity sha512-JtHjzZmJxtzfTSjsCyHgPR155HBe5WGyUyHTaEkfy46qhwCFKx1Epm6nAxgUG3WfUZP1dWhGqj9Z2NOBeZ+uBw==
 
-app-root-dir@^1.0.2:
+stb-root-dir@^1.0.2:
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/app-root-dir/-/app-root-dir-1.0.2.tgz#38187ec2dea7577fff033ffcb12172692ff6e118"
+  resolved "https://registry.yarnpkg.com/stb-root-dir/-/stb-root-dir-1.0.2.tgz#38187ec2dea7577fff033ffcb12172692ff6e118"
   integrity sha1-OBh+wt6nV3//Az/8sSFyaS/24Rg=
 
 aproba@^1.0.3, aproba@^1.1.1:
@@ -9143,7 +9143,7 @@ lazy-universal-dotenv@^3.0.1:
   integrity sha512-prXSYk799h3GY3iOWnC6ZigYzMPjxN2svgjJ9shk7oMadSNX3wXy0B6F32PMJv7qtMnrIbUxoEHzbutvxR2LBQ==
   dependencies:
     "@babel/runtime" "^7.5.0"
-    app-root-dir "^1.0.2"
+    stb-root-dir "^1.0.2"
     core-js "^3.0.4"
     dotenv "^8.0.0"
     dotenv-expand "^5.1.0"

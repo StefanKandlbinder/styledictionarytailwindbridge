@@ -9,8 +9,7 @@
     @apply text-gray-700;
 
     font-size: 16px;
-    font-family: 'Exo', sans-serif;
-    font-family: 'Exo', serif;
+    @apply font-sans;
   }
 
   *, ::before, ::after {
@@ -28,10 +27,14 @@
   }
 
   h1 {
-    @apply uppercase text-primary-500 font-medium text-4xl;
+    @apply uppercase text-primary-500 font-medium text-4xl tracking-wider;
   }
 
   h2 {
-    @apply uppercase text-2xl text-primary-500;
+    @apply uppercase text-2xl text-primary-500 tracking-wide;
+  }
+
+  h3 {
+    @apply uppercase text-xl text-primary-500 tracking-wide;
   }
 }

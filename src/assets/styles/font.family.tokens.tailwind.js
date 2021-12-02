@@ -1,0 +1,1 @@
+module.exports = {sans:"var(--one-font-family-sans)",serif:"var(--one-font-family-serif)",mono:"var(--one-font-family-mono)",}

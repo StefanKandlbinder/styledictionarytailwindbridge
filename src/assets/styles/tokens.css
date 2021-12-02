@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 27 Nov 2021 12:52:43 GMT
+ * Generated on Thu, 02 Dec 2021 15:40:48 GMT
  */
 
 :root {
@@ -18,6 +18,9 @@
   --one-spacing-2: 1rem;
   --one-spacing-1: 0.5rem;
   --one-spacing-0: 0px;
+  --one-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  --one-font-family-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  --one-font-family-sans: Exo, sans-serif;
   --one-color-gray-900: 70, 70, 70;
   --one-color-gray-800: 90, 90, 90;
   --one-color-gray-700: 110, 110, 110;

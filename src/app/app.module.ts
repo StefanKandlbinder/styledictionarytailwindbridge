@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ColorsComponent } from './designsystem/colors/colors.component';
 import { SpacingComponent } from './designsystem/spacing/spacing.component';
+import { TypoComponent } from './designsystem/typo/typo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ColorsComponent,
-    SpacingComponent
+    SpacingComponent,
+    TypoComponent
   ],
   imports: [
     BrowserModule,

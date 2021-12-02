@@ -1,4 +1,4 @@
-<ul class="flex flex-col overflow-x-auto">
+<!-- <ul class="flex flex-col overflow-x-auto">
   <li class="flex">
     <div class="flex bg-gray-100 sticky left-0 items-center justify-center border-r border-gray-200">
       <div class="w-16 flex-shrink-0 font-medium">Hue</div>
@@ -32,21 +32,21 @@
       </li>
     </ul>
   </li>
-</ul>
-<!-- <div class="grid grid-cols-1 gap-8">
+</ul>-->
+<div class="grid grid-cols-1 gap-8">
   <div>
     <div *ngFor="let color of colors" class="flex flex-col space-y-2 sm:flex-row text-xs sm:space-y-0 sm:space-x-4 mt-4">
-      <div class="w-32 flex-shrink-0">
+      <div class="w-16 flex-shrink-0">
         <div class="h-10 flex flex-col justify-center">
           <div class="text-sm font-semibold text-gray-900">{{ color[0].attributes.type }}</div>
           <div><code class="text-xs text-gray-500">colors.{{ color[0].attributes.type }}</code></div>
         </div>
       </div>
-      <div class="min-w-0 flex-1 grid grid-cols-4 2xl:grid-cols-10 gap-x-2 gap-y-2 2xl:gap-x-2">
-        <div *ngFor="let hue of color" class="space-y-1.5">
+      <div class="min-w-0 flex-1 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 2xl:grid-cols-10 gap-x-2 gap-y-2 2xl:gap-x-2">
+        <div *ngFor="let hue of color">
           <div class="h-12 w-full rounded ring-1 ring-inset ring-black ring-opacity-0"
           [style.background]="getColorToken(hue)"></div>
-          <div class="px-0.5 md:flex md:justify-between md:space-x-2 2xl:space-x-0 2xl:block">
+          <div class="mt-1 px-0.5 md:flex md:flex-col md:justify-between 2xl:block">
             <div class="w-6 font-medium text-gray-900">{{ hue.attributes.item }}</div>
             <div>RGB ({{ hue.value }})</div>
           </div>
@@ -54,4 +54,4 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>
