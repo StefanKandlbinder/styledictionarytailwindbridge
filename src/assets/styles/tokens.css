@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 02 Dec 2021 15:40:48 GMT
+ * Generated on Thu, 02 Dec 2021 21:01:27 GMT
  */
 
 :root {
@@ -18,6 +18,15 @@
   --one-spacing-2: 1rem;
   --one-spacing-1: 0.5rem;
   --one-spacing-0: 0px;
+  --one-font-weight-black: 900;
+  --one-font-weight-extrabold: 800;
+  --one-font-weight-bold: 700;
+  --one-font-weight-semibold: 600;
+  --one-font-weight-medium: 500;
+  --one-font-weight-normal: 400;
+  --one-font-weight-light: 300;
+  --one-font-weight-extralight: 200;
+  --one-font-weight-thin: 100;
   --one-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   --one-font-family-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   --one-font-family-sans: Exo, sans-serif;

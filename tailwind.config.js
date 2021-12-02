@@ -1,6 +1,7 @@
 const colors = require("./src/assets/styles/color.tokens.tailwind.js")
 const spacing = require("./src/assets/styles/spacing.tokens.tailwind.js")
 const fontFamily = require("./src/assets/styles/font.family.tokens.tailwind.js")
+const fontWeight = require("./src/assets/styles/font.weight.tokens.tailwind.js")
 // const colors = require('tailwindcss/colors')
 
 module.exports = {
@@ -215,17 +216,7 @@ module.exports = {
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
     },
-    fontWeight: {
-      thin: '100',
-      extralight: '200',
-      light: '300',
-      normal: '400',
-      medium: '500',
-      semibold: '600',
-      bold: '700',
-      extrabold: '800',
-      black: '900',
-    },
+    fontWeight,
     gap: (theme) => theme('spacing'),
     gradientColorStops: (theme) => theme('colors'),
     gridAutoColumns: {
