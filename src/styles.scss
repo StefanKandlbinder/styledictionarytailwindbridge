@@ -3,6 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind screens;
 
 @layer base {
   body {
@@ -27,7 +28,10 @@
   }
 
   h1 {
-    @apply uppercase text-primary-500 font-medium text-4xl tracking-wider;
+    @apply uppercase text-primary-500 font-medium text-3xl tracking-wider;
+    @screen sm {
+      @apply text-4xl
+    }
   }
 
   h2 {
