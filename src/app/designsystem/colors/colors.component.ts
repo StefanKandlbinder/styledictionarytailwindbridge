@@ -55,6 +55,6 @@ export class ColorsComponent implements OnInit {
   }
 
   getColorToken(hue: any) {
-    return `rgb(var(--one-color-${ hue.attributes.type }-${ hue.attributes.item }))`
+    return `rgb(var(--${ hue.name }))`
   }
 }

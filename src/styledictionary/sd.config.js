@@ -24,7 +24,7 @@ module.exports = {
     json: {
       buildPath: 'src/assets/styles/',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
-      prefix: "one",
+      prefix: "stb",
       files: [{
         destination: 'tokens.json',
         format: 'json'
@@ -34,7 +34,7 @@ module.exports = {
       buildPath: 'src/assets/styles/',
       transformGroup: 'js',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
-      prefix: "one",
+      prefix: "stb",
       files: [{
         destination: 'color.tokens.tailwind.js',
         format: 'tailwindColorFormatRGB',
@@ -47,7 +47,7 @@ module.exports = {
       buildPath: 'src/assets/styles/',
       transformGroup: 'js',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
-      prefix: "one",
+      prefix: "stb",
       files: [{
         destination: 'spacing.tokens.tailwind.js',
         format: 'tailwindSpacingFormat',
@@ -60,7 +60,7 @@ module.exports = {
       buildPath: 'src/assets/styles/',
       transformGroup: 'js',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
-      prefix: "one",
+      prefix: "stb",
       files: [{
         destination: 'font.family.tokens.tailwind.js',
         format: 'tailwindFontFamilyFormat',
@@ -73,7 +73,7 @@ module.exports = {
       buildPath: 'src/assets/styles/',
       transformGroup: 'js',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
-      prefix: "one",
+      prefix: "stb",
       files: [{
         destination: 'font.weight.tokens.tailwind.js',
         format: 'tailwindFontWeightFormat',
@@ -86,7 +86,7 @@ module.exports = {
       buildPath: 'src/assets/styles/',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
       transformGroup: 'js',
-      prefix: "one",
+      prefix: "stb",
       files: [{
         destination: 'tokensModule.js',
         format: 'javascript/module',
@@ -99,7 +99,7 @@ module.exports = {
       transformGroup: 'css',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
       buildPath: 'src/assets/styles/',
-      prefix: "one",
+      prefix: "stb",
       files: [{
         destination: 'tokens.css',
         format: 'css/variables',
