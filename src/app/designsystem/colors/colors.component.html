@@ -39,7 +39,7 @@
       <div class="w-16 flex-shrink-0">
         <div class="h-10 flex flex-col justify-center">
           <div class="text-sm font-semibold text-gray-900">{{ color[0].attributes.type }}</div>
-          <div><code class="text-xs text-gray-500">colors.{{ color[0].attributes.type }}</code></div>
+          <div class="text-xs text-gray-500">colors.{{ color[0].attributes.type }}</div>
         </div>
       </div>
       <div class="min-w-0 flex-1 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 2xl:grid-cols-10 gap-x-2 gap-y-2 2xl:gap-x-2">
@@ -47,8 +47,8 @@
           <div class="h-12 w-full rounded ring-1 ring-inset ring-black ring-opacity-0"
           [style.background]="getColorToken(hue)"></div>
           <div class="mt-1 px-0.5 md:flex md:flex-col md:justify-between 2xl:block">
-            <div class="w-6 font-medium text-gray-900">{{ hue.attributes.item }}</div>
-            <div>RGB ({{ hue.value }})</div>
+            <div class="w-6 font-semibold text-gray-900">{{ hue.attributes.item }}</div>
+            <div class="text-gray-500">RGB ({{ hue.value }})</div>
           </div>
         </div>
       </div>
