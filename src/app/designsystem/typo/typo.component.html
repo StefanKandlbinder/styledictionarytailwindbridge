@@ -1,13 +1,12 @@
 <ng-container *ngFor="let family of families; let i = index">
   <h3 class="pt-1 mt-3 pb-2 sticky top-8 bg-gray-100 z-10">{{ family.attributes.item }}</h3>
   <!-- <p class="mb-2">{{ family.value }}</p> -->
-  <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-7 gap-2">
+  <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-2">
     <li *ngFor="let weight of weights; let j = index"
-      class="w-full flex flex-col justify-end px-2 py-1 h-12 border border-gray-300 rounded-md"
-      [style.fontWeight]="getWeightProperty(weight)"
-      [style.fontFamily]="getFamilyProperty(family)">
-      <div class="text-4xl">Aa</div>
-      <div class="text-xs">{{ weight.attributes.item }} {{ weight.value }}</div>
+      class="w-full flex flex-col justify-end px-2 py-1 h-12 border border-gray-300 rounded-md">
+      <div [style.fontWeight]="getWeightProperty(weight)"
+      [style.fontFamily]="getFamilyProperty(family)" class="text-4xl">Aa</div>
+      <div class="text-xs">{{ weight.attributes.item }}: {{ weight.value }} / --{{ weight.name }}</div>
     </li>
   </ul>
 </ng-container>
@@ -19,10 +18,10 @@
     <div class="text-xs">{{ size.attributes.item }} {{ size.value }}</div>
   </li>
 </ul> -->
-<ul class="grid auto-rows-fr grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-7 gap-2 items-baseline">
+<ul class="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-2 items-baseline">
   <li *ngFor="let size of sizes; let i = index"
     class="flex flex-col justify-end px-2 py-1 border border-gray-300 rounded-md h-full">
     <div [style.fontSize]="getSizeProperty(size)" class="leading-none">Aa</div>
-    <div class="text-xs">{{ size.attributes.item }} {{ size.value }}</div>
+    <div class="text-xs">{{ size.attributes.item }}: {{ size.value }} / --{{ size.name }}</div>
   </li>
 </ul>
