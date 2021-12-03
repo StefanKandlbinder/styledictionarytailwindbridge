@@ -12,9 +12,16 @@
   </ul>
 </ng-container>
 <h3 class="mt-4 mb-2">Size</h3>
-<ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-7 gap-2">
+<!-- <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-7 gap-2">
   <li *ngFor="let size of sizes; let i = index"
     class="w-full flex flex-col justify-end px-2 py-1 h-24 border border-gray-300 rounded-md">
+    <div [style.fontSize]="getSizeProperty(size)" class="leading-none">Aa</div>
+    <div class="text-xs">{{ size.attributes.item }} {{ size.value }}</div>
+  </li>
+</ul> -->
+<ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-7 gap-2 items-baseline">
+  <li *ngFor="let size of sizes; let i = index"
+    class="flex flex-col justify-end px-2 py-1 border border-gray-300 rounded-md h-full">
     <div [style.fontSize]="getSizeProperty(size)" class="leading-none">Aa</div>
     <div class="text-xs">{{ size.attributes.item }} {{ size.value }}</div>
   </li>
