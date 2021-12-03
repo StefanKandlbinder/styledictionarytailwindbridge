@@ -14,10 +14,14 @@ export class TypoComponent implements OnInit {
   weights: any[];
   weightKeys!: string[];
   weightHues!: any;
+  sizes: any[];
+  sizeKeys!: string[];
+  sizeHues!: any;
 
   constructor(private tokensService: TokensService) {
     this.families = [];
     this.weights = [];
+    this.sizes = [];
   }
 
   ngOnInit(): void {
@@ -27,6 +31,7 @@ export class TypoComponent implements OnInit {
           this.tokens = next;
           this.getFamilyTokens();
           this.getWeightTokens();
+          this.getSizeTokens();
         }
       }
     )
@@ -46,11 +51,22 @@ export class TypoComponent implements OnInit {
     })
   }
 
+  getSizeTokens() {
+    this.sizeKeys = Object.keys(this.tokens.font.size);
+    this.sizeKeys.map(key => {
+      this.sizes.push(this.tokens.font.size[key]);
+    })
+  }
+
   getFamilyProperty(family: any) {
     return `var(--${ family.name })`
   }
 
   getWeightProperty(weight: any) {
     return `var(--${ weight.name })`
+  }
+
+  getSizeProperty(size: any) {
+    return `var(--${ size.name })`
   }
 }

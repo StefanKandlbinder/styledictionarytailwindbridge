@@ -1,13 +1,21 @@
 <ng-container *ngFor="let family of families; let i = index">
-  <h3 class="mt-3 mb-2">{{ family.attributes.item }}</h3>
-  <p class="mb-2">{{ family.value }}</p>
+  <h3 class="mt-4 mb-2">{{ family.attributes.item }}</h3>
+  <!-- <p class="mb-2">{{ family.value }}</p> -->
   <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-7 gap-2">
     <li *ngFor="let weight of weights; let j = index"
       class="w-full flex flex-col justify-end px-2 py-1 h-12 border border-gray-300 rounded-md"
       [style.fontWeight]="getWeightProperty(weight)"
       [style.fontFamily]="getFamilyProperty(family)">
       <div class="text-4xl">Aa</div>
-      <div class="text-xs sm:text-base">{{ weight.attributes.item }} {{ weight.value }}</div>
+      <div class="text-xs">{{ weight.attributes.item }} {{ weight.value }}</div>
     </li>
   </ul>
 </ng-container>
+<h3 class="mt-4 mb-2">Size</h3>
+<ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-7 gap-2">
+  <li *ngFor="let size of sizes; let i = index"
+    class="w-full flex flex-col justify-end px-2 py-1 h-24 border border-gray-300 rounded-md">
+    <div [style.fontSize]="getSizeProperty(size)" class="leading-none">Aa</div>
+    <div class="text-xs">{{ size.attributes.item }} {{ size.value }}</div>
+  </li>
+</ul>

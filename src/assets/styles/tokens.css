@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 02 Dec 2021 22:16:15 GMT
+ * Generated on Fri, 03 Dec 2021 12:56:20 GMT
  */
 
 :root {
@@ -27,6 +27,19 @@
   --stb-font-weight-light: 300;
   --stb-font-weight-extralight: 200;
   --stb-font-weight-thin: 100;
+  --stb-font-size-9xl: 8rem;
+  --stb-font-size-8xl: 6rem;
+  --stb-font-size-7xl: 4.5rem;
+  --stb-font-size-6xl: 3.75rem;
+  --stb-font-size-5xl: 3rem;
+  --stb-font-size-4xl: 2.25rem;
+  --stb-font-size-3xl: 1.875rem;
+  --stb-font-size-2xl: 1.5rem;
+  --stb-font-size-xl: 1.25rem;
+  --stb-font-size-lg: 1.125rem;
+  --stb-font-size-base: 1rem;
+  --stb-font-size-sm: 0.875rem;
+  --stb-font-size-xs: 0.75rem;
   --stb-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   --stb-font-family-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   --stb-font-family-sans: Exo, sans-serif;

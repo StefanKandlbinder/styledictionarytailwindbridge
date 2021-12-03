@@ -2,6 +2,7 @@ const colors = require("./src/assets/styles/color.tokens.tailwind.js")
 const spacing = require("./src/assets/styles/spacing.tokens.tailwind.js")
 const fontFamily = require("./src/assets/styles/font.family.tokens.tailwind.js")
 const fontWeight = require("./src/assets/styles/font.weight.tokens.tailwind.js")
+const fontSize = require("./src/assets/styles/font.size.tokens.tailwind.js")
 // const colors = require('tailwindcss/colors')
 
 module.exports = {
@@ -201,7 +202,7 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily,
-    fontSize: {
+    /* fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],
       sm: ['0.875rem', { lineHeight: '1.25rem' }],
       base: ['1rem', { lineHeight: '1.5rem' }],
@@ -215,7 +216,8 @@ module.exports = {
       '7xl': ['4.5rem', { lineHeight: '1' }],
       '8xl': ['6rem', { lineHeight: '1' }],
       '9xl': ['8rem', { lineHeight: '1' }],
-    },
+    }, */
+    fontSize,
     fontWeight,
     gap: (theme) => theme('spacing'),
     gradientColorStops: (theme) => theme('colors'),
