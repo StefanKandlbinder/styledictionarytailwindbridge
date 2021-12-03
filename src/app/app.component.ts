@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'stb-root',
+  selector: 'stw-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
@@ -11,7 +11,7 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     const toc = document.querySelectorAll("[data-toc]");
-    console.log(toc)
+    // console.log(toc)
     // toc[toc.length-1].scrollIntoView();
   }
 }

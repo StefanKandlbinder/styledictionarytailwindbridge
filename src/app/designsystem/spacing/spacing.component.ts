@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TokensService } from '../tokens.service';
 
 @Component({
-  selector: 'stb-spacing',
+  selector: 'stw-spacing',
   templateUrl: './spacing.component.html',
   styleUrls: ['./spacing.component.scss']
 })

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TokensService } from '../tokens.service';
 
 @Component({
-  selector: 'stb-typo',
+  selector: 'stw-typo',
   templateUrl: './typo.component.html',
   styleUrls: ['./typo.component.scss']
 })

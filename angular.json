@@ -15,7 +15,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "stb",
+      "prefix": "stw",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

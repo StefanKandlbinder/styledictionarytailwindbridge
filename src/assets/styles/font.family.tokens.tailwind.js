@@ -1,1 +1,1 @@
-module.exports = {sans:"var(--stb-font-family-sans)",serif:"var(--stb-font-family-serif)",mono:"var(--stb-font-family-mono)",}
+module.exports = {sans:"var(--stw-font-family-sans)",serif:"var(--stw-font-family-serif)",mono:"var(--stw-font-family-mono)",}

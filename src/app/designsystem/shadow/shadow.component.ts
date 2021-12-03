@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TokensService } from '../tokens.service';
 
 @Component({
-  selector: 'stb-shadow',
+  selector: 'stw-shadow',
   templateUrl: './shadow.component.html',
   styleUrls: ['./shadow.component.scss']
 })

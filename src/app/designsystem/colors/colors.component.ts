@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TokensService } from '../tokens.service';
 
 @Component({
-  selector: 'stb-colors',
+  selector: 'stw-colors',
   templateUrl: './colors.component.html',
   styleUrls: ['./colors.component.scss']
 })

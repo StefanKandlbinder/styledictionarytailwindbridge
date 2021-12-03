@@ -32,7 +32,7 @@ module.exports = {
     json: {
       buildPath: 'src/assets/styles/',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
-      prefix: "stb",
+      prefix: "stw",
       files: [{
         destination: 'tokens.json',
         format: 'json'
@@ -42,7 +42,7 @@ module.exports = {
       buildPath: 'src/assets/styles/',
       transformGroup: 'js',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
-      prefix: "stb",
+      prefix: "stw",
       files: [{
         destination: 'color.tokens.tailwind.js',
         format: 'tailwindColorFormatRGB',
@@ -55,7 +55,7 @@ module.exports = {
       buildPath: 'src/assets/styles/',
       transformGroup: 'js',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
-      prefix: "stb",
+      prefix: "stw",
       files: [{
         destination: 'spacing.tokens.tailwind.js',
         format: 'tailwindSpacingFormat',
@@ -68,7 +68,7 @@ module.exports = {
       buildPath: 'src/assets/styles/',
       transformGroup: 'js',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
-      prefix: "stb",
+      prefix: "stw",
       files: [{
         destination: 'font.family.tokens.tailwind.js',
         format: 'tailwindFontFamilyFormat',
@@ -81,7 +81,7 @@ module.exports = {
       buildPath: 'src/assets/styles/',
       transformGroup: 'js',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
-      prefix: "stb",
+      prefix: "stw",
       files: [{
         destination: 'font.weight.tokens.tailwind.js',
         format: 'tailwindFontWeightFormat',
@@ -94,7 +94,7 @@ module.exports = {
       buildPath: 'src/assets/styles/',
       transformGroup: 'js',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
-      prefix: "stb",
+      prefix: "stw",
       files: [{
         destination: 'font.size.tokens.tailwind.js',
         format: 'tailwindFontSizeFormat',
@@ -107,7 +107,7 @@ module.exports = {
       buildPath: 'src/assets/styles/',
       transformGroup: 'js',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
-      prefix: "stb",
+      prefix: "stw",
       files: [{
         destination: 'shadow.tokens.tailwind.js',
         format: 'tailwindShadowFormat',
@@ -120,7 +120,7 @@ module.exports = {
       buildPath: 'src/assets/styles/',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
       transformGroup: 'js',
-      prefix: "stb",
+      prefix: "stw",
       files: [{
         destination: 'tokensModule.js',
         format: 'javascript/module',
@@ -133,7 +133,7 @@ module.exports = {
       transformGroup: 'css',
       transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
       buildPath: 'src/assets/styles/',
-      prefix: "stb",
+      prefix: "stw",
       files: [{
         destination: 'tokens.css',
         format: 'css/variables',

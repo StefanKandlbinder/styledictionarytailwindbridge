@@ -1,1 +1,1 @@
-module.exports = {"sm":"var(--stb-shadow-sm)","DEFAULT":"var(--stb-shadow-default)","md":"var(--stb-shadow-md)","lg":"var(--stb-shadow-lg)","xl":"var(--stb-shadow-xl)","2xl":"var(--stb-shadow-2xl)","inner":"var(--stb-shadow-inner)","none":"var(--stb-shadow-none)",}
+module.exports = {"sm":"var(--stw-shadow-sm)","DEFAULT":"var(--stw-shadow-default)","md":"var(--stw-shadow-md)","lg":"var(--stw-shadow-lg)","xl":"var(--stw-shadow-xl)","2xl":"var(--stw-shadow-2xl)","inner":"var(--stw-shadow-inner)","none":"var(--stw-shadow-none)",}
