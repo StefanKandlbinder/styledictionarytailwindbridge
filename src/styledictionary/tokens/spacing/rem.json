@@ -22,7 +22,10 @@
       "value": "4rem"
     },
     "12": {
-      "value": "6em"
+      "value": "6rem"
+    },
+    "14": {
+      "value": "7rem"
     },
     "16": {
       "value": "8rem"
