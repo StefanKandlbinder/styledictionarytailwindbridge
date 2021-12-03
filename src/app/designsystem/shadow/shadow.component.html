@@ -1,6 +1,7 @@
-<ul class="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-x-2 gap-y-4 items-baseline pb-12">
+<ul class="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-x-2 gap-y-4 items-baseline">
   <li [style.boxShadow]="getShadowProperty(shadow)" *ngFor="let shadow of shadows; let i = index"
     class="flex flex-col justify-end px-2 py-1 rounded-md h-12">
     <div class="text-xs">{{ shadow.attributes.type }}</div>
+    <div class="text-xs text-gray-500">--{{ shadow.name }}</div>
   </li>
 </ul>
