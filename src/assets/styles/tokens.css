@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 03 Dec 2021 18:08:48 GMT
+ * Generated on Fri, 03 Dec 2021 21:11:49 GMT
  */
 
 :root {
@@ -21,12 +21,12 @@
   --stb-spacing-0: 0px;
   --stb-shadow-none: none;
   --stb-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-  --stb-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0), 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --stb-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0), 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --stb-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --stb-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --stb-shadow-default: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --stb-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --stb-shadow-2xl: rgb(0 0 0 / 5%) 0px 12.3003px 8.00313px 0px, rgb(0 0 0 / 3%) 0px 20.1308px 13.8329px 0px, rgb(0 0 0 / 2%) 0px 29.5921px 21.0914px 0px, rgb(0 0 0 / 1%) 0px 50px 44px 0px;
+  --stb-shadow-xl: rgb(0 0 0 / 5%) 0px 9.84025px 7.27558px 0px, rgb(0 0 0 / 3%) 0px 16.1047px 12.5753px 0px, rgb(0 0 0 / 2%) 0px 23.6737px 19.174px 0px, rgb(0 0 0 / 1%) 0px 40px 40px 0px;
+  --stb-shadow-lg: rgb(0 0 0 / 7%) 0px 4.92013px 7.27558px 0px, rgb(0 0 0 / 4%) 0px 8.05233px 12.5753px 0px, rgb(0 0 0 / 3%) 0px 11.8368px 19.174px 0px, rgb(0 0 0 / 2%) 0px 20px 40px 0px;
+  --stb-shadow-md: rgb(0 0 0 / 7%) 0px 2.46006px 7.27558px 0px, rgb(0 0 0 / 4%) 0px 4.02617px 12.5753px 0px, rgb(0 0 0 / 3%) 0px 5.91842px 19.174px 0px, rgb(0 0 0 / 2%) 0px 10px 40px 0px;
+  --stb-shadow-default: rgb(0 0 0 / 7%) 0px 2.46006px 3.63779px 0px, rgb(0 0 0 / 4%) 0px 4.02617px 6.28766px 0px, rgb(0 0 0 / 3%) 0px 5.91842px 9.587px 0px, rgb(0 0 0 / 2%) 0px 10px 20px 0px;
+  --stb-shadow-sm: rgb(0 0 0 / 7%) 0px 1.23003px 2.18267px 0px, rgb(0 0 0 / 4%) 0px 2.01308px 3.7726px 0px, rgb(0 0 0 / 3%) 0px 2.95921px 5.7522px 0px, rgb(0 0 0 / 2%) 0px 5px 12px 0px;
   --stb-font-weight-black: 900;
   --stb-font-weight-extrabold: 800;
   --stb-font-weight-bold: 700;

@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ColorsComponent } from './designsystem/colors/colors.component';
 import { SpacingComponent } from './designsystem/spacing/spacing.component';
 import { TypoComponent } from './designsystem/typo/typo.component';
+import { ShadowComponent } from './designsystem/shadow/shadow.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ColorsComponent,
     SpacingComponent,
-    TypoComponent
+    TypoComponent,
+    ShadowComponent
   ],
   imports: [
     BrowserModule,
