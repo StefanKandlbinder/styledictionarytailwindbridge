@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 03 Dec 2021 13:34:27 GMT
+ * Generated on Fri, 03 Dec 2021 18:08:48 GMT
  */
 
 :root {
@@ -19,6 +19,14 @@
   --stb-spacing-2: 1rem;
   --stb-spacing-1: 0.5rem;
   --stb-spacing-0: 0px;
+  --stb-shadow-none: none;
+  --stb-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --stb-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0), 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --stb-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0), 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --stb-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --stb-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --stb-shadow-default: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --stb-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --stb-font-weight-black: 900;
   --stb-font-weight-extrabold: 800;
   --stb-font-weight-bold: 700;

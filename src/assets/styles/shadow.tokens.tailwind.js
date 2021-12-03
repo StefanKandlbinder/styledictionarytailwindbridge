@@ -1,0 +1,1 @@
+module.exports = {"sm":"var(--stb-shadow-sm)","DEFAULT":"var(--stb-shadow-default)","md":"var(--stb-shadow-md)","lg":"var(--stb-shadow-lg)","xl":"var(--stb-shadow-xl)","2xl":"var(--stb-shadow-2xl)","inner":"var(--stb-shadow-inner)","none":"var(--stb-shadow-none)",}

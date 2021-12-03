@@ -4,6 +4,7 @@ const tailwindSpacingFormat = require('./formats/tailwindSpacingFormat');
 const tailwindFontFamilyFormat = require('./formats/tailwindFontFamilyFormat');
 const tailwindFontWeightFormat = require('./formats/tailwindFontWeightFormat');
 const tailwindFontSizeFormat = require('./formats/tailwindFontSizeFormat');
+const tailwindShadowFormat = require('./formats/tailwindShadowFormat');
 
 module.exports = {
   format: {
@@ -20,7 +21,10 @@ module.exports = {
     tailwindFontWeightFormat: tailwindFontWeightFormat,
 
     // Transforming font sizes to a tailwind.confing.js fontSize Object
-    tailwindFontSizeFormat: tailwindFontSizeFormat
+    tailwindFontSizeFormat: tailwindFontSizeFormat,
+
+    // Transforming shadows to a tailwind.confing.js boxShadow Object
+    tailwindShadowFormat: tailwindShadowFormat
   },
 
   source: ['src/styledictionary/tokens/**/*.json', '!src/styledictionary/tokens/tailwind/*.json'],
@@ -94,6 +98,19 @@ module.exports = {
       files: [{
         destination: 'font.size.tokens.tailwind.js',
         format: 'tailwindFontSizeFormat',
+        options: {
+          outputReferences: false
+        }
+      }]
+    },
+    jsCustomShadow: {
+      buildPath: 'src/assets/styles/',
+      transformGroup: 'js',
+      transforms: ["attribute/cti", "name/cti/kebab", "size/rem"],
+      prefix: "stb",
+      files: [{
+        destination: 'shadow.tokens.tailwind.js',
+        format: 'tailwindShadowFormat',
         options: {
           outputReferences: false
         }
