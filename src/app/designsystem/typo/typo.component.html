@@ -1,12 +1,15 @@
 <ng-container *ngFor="let family of families; let i = index">
   <h3 id="{{ family.attributes.item }}" class="pt-1 mt-3 pb-2 sticky top-8 bg-gray-100 z-10">{{ family.attributes.item }}</h3>
   <!-- <p class="mb-2">{{ family.value }}</p> -->
-  <ul class="grid auto-rows-fr grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-2">
+  <ul class="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-2">
     <li *ngFor="let weight of weights; let j = index"
-      class="w-full flex flex-col justify-end px-2 py-1 border border-gray-300 rounded-md">
+      class="w-full flex flex-col justify-between px-2 py-1 border border-gray-300 rounded-md">
       <div [style.fontWeight]="getWeightProperty(weight)"
       [style.fontFamily]="getFamilyProperty(family)" class="text-4xl">Aa</div>
-      <div class="text-sm font-semibold">{{ weight.attributes.item }}<span class="text-sm font-normal">: {{ weight.value }} / --{{ weight.name }}</span></div>
+      <div class="text-sm font-semibold flex justify-between">
+        <span>{{ weight.attributes.item }}<span class="text-sm font-normal"> {{ weight.value }}</span></span>
+        <span class="text-xs font-normal">--{{ weight.name }}</span>
+      </div>
     </li>
   </ul>
 </ng-container>
@@ -18,10 +21,13 @@
     <div class="text-xs">{{ size.attributes.item }} {{ size.value }}</div>
   </li>
 </ul> -->
-<ul class="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-2 items-baseline">
+<ul class="grid auto-rows-fr grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-2">
   <li *ngFor="let size of sizes; let i = index"
-    class="flex flex-col justify-end px-2 py-1 border border-gray-300 rounded-md h-full">
+    class="w-full flex flex-col justify-between px-2 py-1 border border-gray-300 rounded-md">
     <div [style.fontSize]="getSizeProperty(size)" class="leading-none">Aa</div>
-    <div class="text-sm font-semibold">{{ size.attributes.item }}<span class="text-sm font-normal">: {{ size.value }} / --{{ size.name }}</span></div>
+    <div class="text-sm font-semibold flex justify-between">
+      <span>{{ size.attributes.item }}<span class="text-sm font-normal">: {{ size.value }}</span></span>
+      <span class="text-xs font-normal">--{{ size.name }}</span>
+    </div>
   </li>
 </ul>
