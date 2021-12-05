@@ -11,25 +11,22 @@
   </ul>
 </div> -->
 
-<div class="block overflow-x-auto">
-  <table>
-    <thead>
-      <tr>
-        <th class="text-left pr-2 pb-2 font-semibold">Name</th>
-        <th class="text-left px-2 pb-2">Size</th>
-        <th class="text-left px-2 pb-2 whitespace-nowrap">CSS Custom Property</th>
-        <th class="text-left px-2 pb-2">Preview</th>
-      </tr>
-    </thead>
-    <tbody class="text-sm">
-      <tr *ngFor="let spacing of spacings; let i = index">
-        <td class="py-1 pr-2 font-semibold">{{ spacing.attributes.type }}</td>
-        <td class="py-1 px-2 text-sm">{{ spacing.value }}</td>
-        <td class="py-1 px-2 text-xs whitespace-nowrap">--{{ spacing.name }}</td>
-        <td class="py-1 px-2 text-sm">
-          <div class="bg-primary-300 h-3" [style.width]="getSpacingProperty(spacing)"></div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="block overflow-x-auto overflow-y-hidden">
+  <div class="grid grid-cols-3 md:grid-temp-cols-4 gap-2">
+    <div class="text-left font-semibold">Name</div>
+    <div class="text-left font-semibold">Size</div>
+    <div class="text-left font-semibold whitespace-nowrap">CSS Custom Property</div>
+    <div class="text-left font-semibold col-span-3 h-0 invisible md:visible md:h-auto md:col-auto">Preview</div>
+    <ng-container *ngFor="let spacing of spacings; let i = index">
+      <div class="font-semibold relative">
+        <div class="bg-primary-200 h-full absolute top-0 md:hidden z-0" [style.width]="getSpacingProperty(spacing)"></div>
+        <div class="z-0 relative">{{ spacing.attributes.type }}</div>
+      </div>
+      <div class="text-sm z-0">{{ spacing.value }}</div>
+      <div class="text-xs whitespace-nowrap z-0">--{{ spacing.name }}</div>
+      <div class="text-sm col-span-3 hidden md:block md:col-auto">
+        <div class="bg-primary-200 h-3" [style.width]="getSpacingProperty(spacing)"></div>
+      </div>
+    </ng-container>
+  </div>
 </div>

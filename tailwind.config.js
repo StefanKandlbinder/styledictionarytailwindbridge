@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 const colors = require("./src/assets/styles/color.tokens.tailwind.js")
 const spacing = require("./src/assets/styles/spacing.tokens.tailwind.js")
 const fontFamily = require("./src/assets/styles/font.family.tokens.tailwind.js")
@@ -885,5 +887,24 @@ module.exports = {
     wordBreak: ['responsive'],
     zIndex: ['responsive', 'focus-within', 'focus'],
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addUtilities }) {
+      const gridColumnsTemplateAuto = {
+        '.grid-temp-cols-1': {
+          'grid-template-columns': 'repeat(4, auto)',
+        },
+        '.grid-temp-cols-2': {
+          'grid-template-columns': 'repeat(2, auto)'
+        },
+        '.grid-temp-cols-3': {
+          'grid-template-columns': 'repeat(3, auto)'
+        },
+        '.grid-temp-cols-4': {
+          'grid-template-columns': 'repeat(4, auto)'
+        }
+      }
+
+      addUtilities(gridColumnsTemplateAuto, ['responsive'])
+    })
+  ],
 }
