@@ -15,15 +15,15 @@
   <table>
     <thead>
       <tr>
-        <th class="text-left pr-2 pb-2 font-bold">Name</th>
+        <th class="text-left pr-2 pb-2 font-semibold">Name</th>
         <th class="text-left px-2 pb-2">Size</th>
         <th class="text-left px-2 pb-2 whitespace-nowrap">CSS Custom Property</th>
         <th class="text-left px-2 pb-2">Preview</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="text-sm">
       <tr *ngFor="let spacing of spacings; let i = index">
-        <td class="py-1 pr-2 text-sm">{{ spacing.attributes.type }}</td>
+        <td class="py-1 pr-2 font-semibold">{{ spacing.attributes.type }}</td>
         <td class="py-1 px-2 text-sm">{{ spacing.value }}</td>
         <td class="py-1 px-2 text-sm whitespace-nowrap">--{{ spacing.name }}</td>
         <td class="py-1 px-2 text-sm">

@@ -35,21 +35,21 @@
 </ul>-->
 <div class="grid grid-cols-1 gap-8">
   <div class="space-y-6">
-    <div *ngFor="let color of colors" class="flex flex-col sm:flex-row text-xs space-y-2 sm:space-y-0 sm:space-x-4">
+    <div *ngFor="let color of colors" class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
       <div class="w-16 flex-shrink-0">
         <div class="h-10 flex flex-col justify-center">
-          <div class="text-sm font-semibold text-gray-900">{{ color[0].attributes.type }}</div>
-          <div class="text-xs text-gray-500">colors.{{ color[0].attributes.type }}</div>
+          <div class="text-sm font-semibold">{{ color[0].attributes.type }}</div>
+          <div class="text-sm text-gray-500">colors.{{ color[0].attributes.type }}</div>
         </div>
       </div>
-      <div class="min-w-0 flex-1 grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 2xl:grid-cols-10 gap-x-2 gap-y-2 2xl:gap-x-2">
+      <div class="min-w-0 flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8 gap-x-2 gap-y-2 2xl:gap-x-2">
         <div *ngFor="let hue of color">
           <div class="h-6 w-full rounded-md"
           [style.background]="getColorToken(hue)"></div>
-          <div class="mt-1 px-0.5 md:flex md:flex-col md:justify-between 2xl:block">
-            <div class="w-6 font-semibold text-gray-900">{{ hue.attributes.item }}</div>
-            <div class="text-gray-500">RGB ({{ hue.value }})</div>
-            <div class="text-xs text-gray-500">--{{ hue.name }}</div>
+          <div class="text-sm mt-1 px-0.5 md:flex md:flex-col md:justify-between 2xl:block">
+            <div class="w-6 font-semibold">{{ hue.attributes.item }}</div>
+            <div class="">RGB ({{ hue.value }})</div>
+            <div class="">--{{ hue.name }}</div>
           </div>
         </div>
       </div>
