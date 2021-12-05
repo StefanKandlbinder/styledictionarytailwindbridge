@@ -19,13 +19,13 @@
     <div class="text-left font-semibold col-span-3 h-0 invisible md:visible md:h-auto md:col-auto">Preview</div>
     <ng-container *ngFor="let spacing of spacings; let i = index">
       <div class="font-semibold relative">
-        <div class="bg-primary-200 h-full absolute top-0 md:hidden z-0" [style.width]="getSpacingProperty(spacing)"></div>
+        <div class="bg-primary-100 h-full absolute top-0 md:hidden z-0" [style.width]="getSpacingProperty(spacing)"></div>
         <div class="z-0 relative">{{ spacing.attributes.type }}</div>
       </div>
       <div class="text-sm z-0">{{ spacing.value }}</div>
       <div class="text-xs whitespace-nowrap z-0">--{{ spacing.name }}</div>
       <div class="text-sm col-span-3 hidden md:block md:col-auto">
-        <div class="bg-primary-200 h-3" [style.width]="getSpacingProperty(spacing)"></div>
+        <div class="bg-grayxs-100 h-3" [style.width]="getSpacingProperty(spacing)"></div>
       </div>
     </ng-container>
   </div>
