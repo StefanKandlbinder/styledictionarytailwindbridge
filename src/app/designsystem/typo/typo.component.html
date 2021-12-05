@@ -6,7 +6,7 @@
       class="w-full flex flex-col justify-between px-2 py-1 border border-gray-300 rounded-md">
       <div [style.fontWeight]="getWeightProperty(weight)"
       [style.fontFamily]="getFamilyProperty(family)" class="text-4xl">Aa</div>
-      <div class="text-sm font-semibold flex justify-between">
+      <div class="text-sm font-semibold flex justify-between align-baseline">
         <span>{{ weight.attributes.item }}<span class="text-sm font-normal"> {{ weight.value }}</span></span>
         <span class="text-xs font-normal">--{{ weight.name }}</span>
       </div>
@@ -25,7 +25,7 @@
   <li *ngFor="let size of sizes; let i = index"
     class="w-full flex flex-col justify-between px-2 py-1 border border-gray-300 rounded-md">
     <div [style.fontSize]="getSizeProperty(size)" class="leading-none">Aa</div>
-    <div class="text-sm font-semibold flex justify-between">
+    <div class="text-sm font-semibold flex justify-between align-baseline">
       <span>{{ size.attributes.item }}<span class="text-sm font-normal">: {{ size.value }}</span></span>
       <span class="text-xs font-normal">--{{ size.name }}</span>
     </div>
