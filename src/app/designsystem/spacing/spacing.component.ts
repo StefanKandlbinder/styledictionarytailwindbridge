@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TokensService } from '../tokens.service';
+import { TypoService } from '../typo/typo.service';
 
 @Component({
   selector: 'stw-spacing',
@@ -12,7 +13,7 @@ export class SpacingComponent implements OnInit {
   spacingKeys!: string[];
   spacingHues!: any;
 
-  constructor(private tokensService: TokensService) {
+  constructor(private tokensService: TokensService, private typoService:TypoService) {
     this.spacings = [];
   }
 
@@ -32,6 +33,10 @@ export class SpacingComponent implements OnInit {
     this.spacingKeys.map(key => {
       this.spacings.push(this.tokens.spacing[key]);
     })
+  }
+
+  getPixelValue(rem:string) {
+    return this.typoService.getPixelfromRem(rem);
   }
 
   getSpacingProperty(spacing: any) {

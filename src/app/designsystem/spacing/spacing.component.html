@@ -22,7 +22,7 @@
         <div class="bg-primary-100 h-full absolute top-0 md:hidden z-0" [style.width]="getSpacingProperty(spacing)"></div>
         <div class="z-0 relative">{{ spacing.attributes.type }}</div>
       </div>
-      <div class="text-sm z-0">{{ spacing.value }}</div>
+      <div [ngClass]="spacing.value === '1rem' ? 'font-bold' : ''" class="text-sm z-0">{{ spacing.value }} / {{ getPixelValue(spacing.value) }}px</div>
       <div class="text-xs whitespace-nowrap z-0">--{{ spacing.name }}</div>
       <div class="text-sm col-span-3 hidden md:block md:col-auto">
         <div class="text-xs bg-primary-100 h-3" [style.width]="getSpacingProperty(spacing)"></div>

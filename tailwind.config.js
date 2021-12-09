@@ -328,6 +328,7 @@ module.exports = {
       4: 'repeat(4, minmax(0, 1fr))',
       5: 'repeat(5, minmax(0, 1fr))',
       6: 'repeat(6, minmax(0, 1fr))',
+      'auto-max': 'auto max-content',
     },
     height: (theme) => ({
       auto: 'auto',
@@ -456,11 +457,12 @@ module.exports = {
       prose: '65ch',
       ...breakpoints(theme('screens')),
     }),
-    minHeight: {
+    minHeight: (theme) => ({
+      ...theme('spacing'),
       0: '0px',
       full: '100%',
       screen: '100vh',
-    },
+    }),
     minWidth: {
       0: '0px',
       full: '100%',

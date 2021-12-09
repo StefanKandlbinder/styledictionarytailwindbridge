@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TokensService } from '../tokens.service';
+import { TypoService } from './typo.service';
 
 @Component({
   selector: 'stw-typo',
@@ -18,7 +19,7 @@ export class TypoComponent implements OnInit {
   sizeKeys!: string[];
   sizeHues!: any;
 
-  constructor(private tokensService: TokensService) {
+  constructor(private tokensService: TokensService, private typoService: TypoService) {
     this.families = [];
     this.weights = [];
     this.sizes = [];
@@ -56,6 +57,10 @@ export class TypoComponent implements OnInit {
     this.sizeKeys.map(key => {
       this.sizes.push(this.tokens.font.size[key]);
     })
+  }
+
+  getPixelValue(rem:string) {
+    return this.typoService.getPixelfromRem(rem);
   }
 
   getFamilyProperty(family: any) {
