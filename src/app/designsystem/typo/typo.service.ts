@@ -12,7 +12,6 @@ export class TypoService {
   }
 
   getPixelfromRem(rem:string) {
-    console.log("font-size", parseFloat(this.baseFontSize) * parseFloat(rem.split("rem")[0]));
     return parseFloat(this.baseFontSize) * parseFloat(rem.split("rem")[0])
   }
 }
