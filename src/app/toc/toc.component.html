@@ -1,7 +1,7 @@
 <div [ngStyle]="{'width': layout === 'horizontal' ? 'calc(100vw - 2rem)' : false}" [ngClass]="{'block overflow-x-auto overflow-y-hidden pb-1': layout === 'horizontal'}">
 <ul
 [ngClass]="{'flex': layout === 'horizontal'}"
-  class="space-x-1 md:space-x-0 md:space-y-0 text-sm">
+  class="space-x-1 md:space-x-0 md:space-y-1 text-sm">
   <li
     *ngFor="let item of fragments"
     [ngClass]="{'pl-2 px-1' : item.name === 'H3' && layout === 'vertical'}">
@@ -9,7 +9,7 @@
       href="#{{item.fragment}}"
       (click)="scrollIntoView(item)"
       [ngClass]="{'bg-primary-500 text-gray-100' : (activeFragment$ | async) === item.fragment, 'text-primary-500 bg-gray-100' : false}"
-      class="px-2 py-1 md:px-1 md:py-1 whitespace-nowrap font-normal transition-colors duration-200 block hover:font-normal hover:text-gray-100 hover:bg-primary-500 hover:bg-opacity-80 first-letter:uppercase">
+      class="rounded text-sm px-2 py-1 md:px-1 md:py-1 whitespace-nowrap font-normal transition-colors duration-200 block hover:font-normal hover:text-gray-100 hover:bg-primary-500 first-letter:uppercase">
       {{ item.title }}
     </a>
   </li>

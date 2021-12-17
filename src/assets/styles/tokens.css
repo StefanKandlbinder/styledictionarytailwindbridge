@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 16 Dec 2021 18:26:08 GMT
+ * Generated on Fri, 17 Dec 2021 19:27:10 GMT
  */
 
 :root {
@@ -53,6 +53,7 @@
   --stw-font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   --stw-font-family-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   --stw-font-family-sans: Poppins, sans-serif;
+  --stw-color-transparent-default: transparent;
   --stw-color-gray-900: 70, 70, 70;
   --stw-color-gray-800: 90, 90, 90;
   --stw-color-gray-700: 110, 110, 110;

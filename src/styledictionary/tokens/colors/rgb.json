@@ -116,6 +116,11 @@
       "100": {
         "value": "250, 250, 250"
       }
+    },
+    "transparent": {
+      "DEFAULT": {
+        "value": "transparent"
+      }
     }
   }
 }

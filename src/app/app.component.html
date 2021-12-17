@@ -1,8 +1,8 @@
 <header class="sticky flex items-center top-0 bg-primary-600 text-gray-100 h-8 z-50 shadow">
   <div class="container px-2 mx-auto uppercase font-medium text-lg">Stylewind</div>
 </header>
-<div class="grid md:grid-cols-12 md:gap-4 container p-2 pb-4 mx-auto">
-  <main class="md:col-span-10">
+<div class="grid md:grid-cols-12 md:gap-6 container p-2 pb-4 mx-auto">
+  <main class="md:col-span-9">
     <div class="sticky top-8 md:static md:top-auto bg-gray-100 pt-2 pb-2 md:pb-0 z-20">
       <h1 id="design-tokens" title="Design Tokens" class="md:mb-4">Design Tokens</h1>
       <stw-toc class="block md:hidden" layout="horizontal" [fragments]="fragments"></stw-toc>
@@ -17,7 +17,7 @@
     <h2 data-toc id="shadow" title="Shadows" class="scroll-mt-20 md:scroll-mt-8 pt-4 mb-3 bg-gray-100 z-10">Shadow</h2>
     <stw-shadow class="block"></stw-shadow>
   </main>
-  <aside class="hidden md:block md:col-span-2">
+  <aside class="hidden md:block md:col-span-3 rounded-xl bg-gray-200 bg-opacity-10 px-2">
     <div class="sticky top-12">
       <div class="mt-2 mb-2 text-xl text-primary-500 uppercase">Design Tokens</div>
       <stw-toc #toc [fragments]="fragments"></stw-toc>
