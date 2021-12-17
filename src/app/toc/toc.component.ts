@@ -10,6 +10,8 @@ import { Fragment } from './fragment';
 })
 export class TocComponent implements AfterViewInit {
   @Input() fragments!: Fragment[];
+  @Input() layout: string = "vertical";
+
   activeFragment$ = this.route.fragment.pipe(share());
 
   constructor(public route: ActivatedRoute) {}
