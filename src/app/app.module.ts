@@ -8,6 +8,7 @@ import { ColorsComponent } from './designsystem/colors/colors.component';
 import { SpacingComponent } from './designsystem/spacing/spacing.component';
 import { TypoComponent } from './designsystem/typo/typo.component';
 import { ShadowComponent } from './designsystem/shadow/shadow.component';
+import { TocComponent } from './toc/toc.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ShadowComponent } from './designsystem/shadow/shadow.component';
     ColorsComponent,
     SpacingComponent,
     TypoComponent,
-    ShadowComponent
+    ShadowComponent,
+    TocComponent
   ],
   imports: [
     BrowserModule,

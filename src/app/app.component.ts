@@ -1,17 +1,29 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit, ViewChild, OnChanges } from '@angular/core';
+import { TocService } from './toc/toc.service';
+import { TocComponent } from './toc/toc.component';
+import { Fragment } from './toc/fragment';
 
 @Component({
   selector: 'stw-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
   title = 'styledictionarytailwindbridge';
-  tableOfContents:any = [];
+  @ViewChild('toc') toc!: TocComponent;
+  fragments: Fragment[] = [];
+
+  constructor(private tocService:TocService) {}
+
+  ngOnInit(): void {
+    this.fragments = this.tocService.getToc();
+  }
 
   ngAfterViewInit(): void {
-    const toc = document.querySelectorAll("[data-toc]");
-    // console.log(toc)
-    // toc[toc.length-1].scrollIntoView();
+    // this.fragments = this.tocService.getToc();
+  }
+
+  updateToc() {
+    this.fragments = this.tocService.getToc();
   }
 }
