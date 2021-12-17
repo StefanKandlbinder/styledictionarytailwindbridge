@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     // THAT'S SOME PIECE OF SHITTY CODE
     setTimeout(() => {
       this.updateToc()
-    }, 300);
+    }, 500);
   }
 
   ngOnInit(): void {
