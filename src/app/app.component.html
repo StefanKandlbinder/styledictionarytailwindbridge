@@ -1,12 +1,12 @@
 <header class="sticky flex items-center top-0 bg-primary-600 text-gray-100 h-8 z-50 shadow">
   <div class="container px-2 mx-auto uppercase font-medium text-lg">Stylewind</div>
 </header>
+<div class="container mx-auto sticky top-8 md:static md:top-auto bg-gray-100 p-2 md:pb-0 z-20">
+  <h1 id="design-tokens" title="Design Tokens" class="md:mb-4">Design Tokens</h1>
+  <stw-toc class="block md:hidden" layout="horizontal" [fragments]="fragments"></stw-toc>
+</div>
 <div class="grid md:grid-cols-12 md:gap-6 container p-2 pb-4 mx-auto">
   <main class="md:col-span-9">
-    <div class="sticky top-8 md:static md:top-auto bg-gray-100 pt-2 pb-2 md:pb-0 z-20">
-      <h1 id="design-tokens" title="Design Tokens" class="md:mb-4">Design Tokens</h1>
-      <stw-toc class="block md:hidden" layout="horizontal" [fragments]="fragments"></stw-toc>
-    </div>
     <p class="">A Design System based on <a href="https://amzn.github.io/style-dictionary/">Style Dictionary Tokens</a>, converted into <a href="https://tailwindcss.com">TailwindCSS</a> Objects, which are then imported into the <code>tailwind.config.js</code>.</p>
     <h2 data-toc id="color-palette" title="Color Palette" class="scroll-mt-20 md:scroll-mt-8 pt-4 mb-3 bg-gray-100 z-10">Color Palette</h2>
     <stw-colors></stw-colors>
