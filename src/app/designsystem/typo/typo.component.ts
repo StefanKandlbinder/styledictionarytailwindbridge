@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, QueryList, ViewChildren, Output, EventEmitter } from '@angular/core';
 import { TokensService } from '../tokens.service';
 import { TypoService } from './typo.service';
 
@@ -7,7 +7,10 @@ import { TypoService } from './typo.service';
   templateUrl: './typo.component.html',
   styleUrls: ['./typo.component.scss']
 })
-export class TypoComponent implements OnInit {
+export class TypoComponent implements OnInit, AfterViewInit {
+  @ViewChildren('family') family! : QueryList<any>;
+  @Output() familyRendered = new EventEmitter<boolean>();
+
   tokens!: any;
   families: any[];
   familyKeys!: string[];
@@ -23,6 +26,13 @@ export class TypoComponent implements OnInit {
     this.families = [];
     this.weights = [];
     this.sizes = [];
+  }
+
+  ngAfterViewInit(): void {
+    this.family.changes.subscribe(t => {
+      // this.fragments = this.tocService.getToc();
+      this.familyRendered.emit(true);
+    })
   }
 
   ngOnInit(): void {

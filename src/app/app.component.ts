@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, NgZone, ChangeDetectorRef } from '@angular/core';
 import { TocService } from './toc/toc.service';
 import { TocComponent } from './toc/toc.component';
 import { Fragment } from './toc/fragment';
@@ -8,23 +8,20 @@ import { Fragment } from './toc/fragment';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  title = 'styledictionarytailwindbridge';
+export class AppComponent {
   @ViewChild('toc') toc!: TocComponent;
+
+  title = 'styledictionarytailwindbridge';
   fragments: Fragment[] = [];
 
-  constructor(private tocService:TocService) {
-    // THAT'S SOME PIECE OF SHITTY CODE
-    setTimeout(() => {
-      this.updateToc()
-    }, 500);
-  }
+  constructor(private _tocService:TocService, private _ngZone: NgZone, private _changeDetectorRef: ChangeDetectorRef) {}
 
-  ngOnInit(): void {
-    this.fragments = this.tocService.getToc();
-  }
-
-  updateToc() {
-    this.fragments = this.tocService.getToc();
+  familyRendered(rendered:boolean) {
+    if (rendered) {
+      this._ngZone.runOutsideAngular(() => {
+        this.fragments = this._tocService.getToc();
+        this._changeDetectorRef.detectChanges();
+      });
+    }
   }
 }
