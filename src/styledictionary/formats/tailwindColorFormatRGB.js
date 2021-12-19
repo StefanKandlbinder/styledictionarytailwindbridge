@@ -22,7 +22,8 @@ const tailwindColorFormatRGB = function ({ dictionary, options }) {
       let variable = "return `rgba(var(" + value + "))`"
 
       if (uniqueType === type) {
-        colors += `
+        if (item !== undefined) {
+          colors += `
           ${[item]}:
             ({ opacityVariable, opacityValue }) => {
               if (opacityValue !== undefined) {
@@ -33,6 +34,21 @@ const tailwindColorFormatRGB = function ({ dictionary, options }) {
               }
                 ${variable}
             },`
+        }
+        else if (item === undefined) {
+          colors = colors.slice(0, -3);
+          colors += `
+            :
+            ({ opacityVariable, opacityValue }) => {
+              if (opacityValue !== undefined) {
+                ${opacityValue}
+              }
+              if (opacityVariable !== undefined) {
+                ${opacityVariable}
+              }
+                ${variable}
+            `
+        }
       }
     })
     colors += "},"

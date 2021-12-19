@@ -118,7 +118,7 @@
       }
     },
     "transparent": {
-      "DEFAULT": {
+      "default": {
         "value": "transparent"
       }
     }

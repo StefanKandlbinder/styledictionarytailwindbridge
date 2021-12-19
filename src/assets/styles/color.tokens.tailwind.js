@@ -359,7 +359,7 @@ module.exports = {primary: {
               }
                 return `rgba(var(--stw-color-gray-900))`
             },},transparent: {
-          DEFAULT:
+          default:
             ({ opacityVariable, opacityValue }) => {
               if (opacityValue !== undefined) {
                 return `rgba(var(--stw-color-transparent-default), ${opacityValue})`
