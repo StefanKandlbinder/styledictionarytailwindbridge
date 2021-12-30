@@ -5,10 +5,10 @@ const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    /* scrollPositionRestoration: 'top',
+    scrollPositionRestoration: 'top',
     anchorScrolling: 'enabled',
     scrollOffset: [0, 64],
-    onSameUrlNavigation: 'reload' */
+    onSameUrlNavigation: 'reload'
   })],
   exports: [RouterModule]
 })

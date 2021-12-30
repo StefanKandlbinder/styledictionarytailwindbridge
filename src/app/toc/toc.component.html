@@ -1,17 +1,31 @@
-<div [ngStyle]="{'width': layout === 'horizontal' ? 'calc(100vw - 2rem)' : false}" [ngClass]="{'block overflow-x-auto overflow-y-hidden pb-1': layout === 'horizontal'}">
-<ul
-[ngClass]="{'flex': layout === 'horizontal'}"
-  class="space-x-1 md:space-x-0 md:space-y-1 text-sm">
-  <li
-    *ngFor="let item of fragments"
-    [ngClass]="{'pl-2 px-1' : item.name === 'H3' && layout === 'vertical'}">
-    <a
-      href="#{{item.fragment}}"
-      (click)="scrollIntoView(item)"
-      [ngClass]="{'bg-primary-500 text-gray-100' : (activeFragment$ | async) === item.fragment, 'text-primary-500 bg-gray-100' : false}"
-      class="rounded text-sm px-2 py-1 md:px-1 md:py-1 whitespace-nowrap font-normal transition-colors duration-200 block hover:font-normal hover:text-gray-100 hover:bg-primary-500 first-letter:uppercase">
-      {{ item.title }}
-    </a>
-  </li>
-</ul>
+<div
+  class=""
+  [ngClass]="{
+    'stw-toc-horizontal': layout === 'horizontal',
+    'stw-toc-vertical': layout === 'vertical'
+  }"
+>
+  <div class="text-ellipsis overflow-hidden whitespace-nowrap font-medium mb-3">{{ tocTitle?.title }}</div>
+  <ul class="stw-toc-list">
+    <li
+      *ngFor="let item of fragments"
+      class="stw-toc-list-item"
+      [ngClass]="{ 'pl-2 px-1': item.name === 'H3' && layout === 'vertical' }"
+    >
+      <a
+        [routerLink]="'.'"
+        [fragment]="item.fragment"
+        attr.data-toc-id="{{item.fragment}}"
+        title="{{ item.title }}"
+        [ngClass]="{
+          'stw-toc-item-link-active':
+            (activeFragment$ | async) === item.fragment,
+          '': false
+        }"
+        class="stw-toc-item-link"
+      >
+        {{ item.title }}
+      </a>
+    </li>
+  </ul>
 </div>

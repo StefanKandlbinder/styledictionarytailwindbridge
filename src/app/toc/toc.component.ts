@@ -1,6 +1,7 @@
-import { Component, AfterViewInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { share } from 'rxjs';
+import { AfterViewInit, ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, ResolveEnd, Router } from '@angular/router';
+import { Observable, Subscription } from 'rxjs';
+import { filter, share } from 'rxjs/operators';
 import { Fragment } from './fragment';
 
 @Component({
@@ -8,40 +9,99 @@ import { Fragment } from './fragment';
   templateUrl: './toc.component.html',
   styleUrls: ['./toc.component.scss']
 })
-export class TocComponent implements AfterViewInit {
+export class TocComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() fragments!: Fragment[];
   @Input() layout: string = "vertical";
 
-  activeFragment$ = this.route.fragment.pipe(share());
+  activeFragment$ = this.activatedRoute.fragment.pipe(share());
+  navigationEnd$!: Subscription;
+  routerEvents$:Observable<any> = this.router.events;
 
-  constructor(public route: ActivatedRoute) {}
+  toc!: NodeList;
+  tocTitle!: Fragment;
+
+  constructor(public activatedRoute: ActivatedRoute, private router: Router, private changeDetectorRef:ChangeDetectorRef) {}
+
+  ngOnInit(): void {
+    this.fragments = [];
+    this.scrollToTop();
+  }
 
   ngAfterViewInit(): void {
-    // this.fragments = this.tocService.getToc();
+    this.setFocus();
   }
+
+  ngOnDestroy(): void {
+    this.navigationEnd$.unsubscribe();
+  }
+
+  setFocus() {
+    this.navigationEnd$ = this.routerEvents$.subscribe((event: any) => {
+      if (event instanceof NavigationEnd) {
+        const url = event.urlAfterRedirects;
+        if (url) {
+          if (url.match('#')) {
+            let fragment = url.split('#')[1];
+            let focusElement = document.querySelector(`[data-toc-id="${fragment}"]`) as HTMLInputElement;
+            focusElement ? focusElement.focus() : null;
+          }
+        }
+      }
+    });
+  }
+
+  addHeaders(tocContainer: HTMLElement) {
+    this.setTitle(tocContainer);
+    this.changeDetectorRef.detectChanges();
+
+    this.toc = tocContainer.querySelectorAll("[data-toc]");
+    this.toc.forEach(fragment => {
+      let tmp = fragment as HTMLElement;
+      this.fragments.push({
+        fragment: tmp.id,
+        name: tmp.nodeName,
+        title: tmp.innerHTML,
+        positionY: tmp.getBoundingClientRect().y
+      });
+    })
+    this.changeDetectorRef.detectChanges();
+  }
+
+  setTitle(tocContainer: HTMLElement) {
+    let tmp = tocContainer.querySelectorAll("[data-toc-title]")[0] as HTMLElement;
+
+    this.tocTitle = {
+      fragment: tmp.id,
+      name: tmp.nodeName,
+      title: tmp.innerHTML,
+      positionY: tmp.getBoundingClientRect().y
+    }
+  }
+
+  scrollToTop() {
+    const url = this.router.url;
+
+    if (url) {
+      if (!url.match('#')) {
+        const body = document.body;
+
+        body?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest"
+        })
+      }
+    }
+  }
+
   scrollIntoView(fragment: Fragment) {
     let element = document.getElementById(fragment.fragment);
-
-    // console.log(fragment.positionY)
-
-    /* this.fragments.map(fragment => {
-      let element = document.getElementById(fragment.fragment);
-      element?.setAttribute("style", "position: static");
-    }) */
-
-    // window.scrollTo(0 ,(fragment.positionY))
 
     element?.scrollIntoView({
       behavior: "smooth",
       block: "start",
       inline: "nearest"
     });
-
-    /* this.fragments.map(fragment => {
-      let element = document.getElementById(fragment.fragment);
-      element?.setAttribute("style", "");
-    }) */
-
   }
 
 }

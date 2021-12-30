@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .stw-toc {
+    &-list {
+      @apply space-x-1 md:space-x-0 md:space-y-1 text-sm
+    }
+
+    &-list-item {
+    }
+
+    &-item-link {
+      @apply text-ellipsis overflow-hidden rounded text-sm px-2 py-1 md:px-1 md:py-1 whitespace-nowrap font-normal transition-colors duration-200 block first-letter:uppercase;
+
+      &:hover {
+        @apply font-normal text-gray-100 bg-primary-400
+      }
+
+      &-active,
+      &:focus,
+      &:focus-visible {
+        @apply bg-primary-500 text-gray-100 outline-none;
+      }
+    }
+
+    &-horizontal {
+      width: calc(100vw - 2rem);
+      @apply block overflow-x-auto overflow-y-hidden pb-1;
+
+      .stw-toc-list {
+        @apply flex;
+      }
+    }
+
+    &-vertical {
+      height: calc(100vh - var(--stw-spacing-16));
+      @apply overflow-y-auto overflow-x-hidden pr-2;
+
+      &::-webkit-scrollbar {
+        @apply w-1
+      }
+
+      &::-webkit-scrollbar-track {}
+
+      &::-webkit-scrollbar-thumb {
+        @apply bg-gray-200;
+      }
+    }
+  }
+}
