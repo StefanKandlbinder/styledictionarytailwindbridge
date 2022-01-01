@@ -4,8 +4,11 @@
 
 @layer components {
   .stw-toc {
+    &-title {
+      @apply text-ellipsis overflow-hidden whitespace-nowrap font-medium mb-3;
+    }
     &-list {
-      @apply space-x-1 md:space-x-0 md:space-y-1 text-sm
+      @apply space-x-1 md:space-x-0 md:space-y-1 text-sm;
     }
 
     &-list-item {
@@ -15,7 +18,7 @@
       @apply text-ellipsis overflow-hidden rounded text-sm px-2 py-1 md:px-1 md:py-1 whitespace-nowrap font-normal transition-colors duration-200 block first-letter:uppercase;
 
       &:hover {
-        @apply font-normal text-gray-100 bg-primary-400
+        @apply font-normal text-gray-100 bg-primary-400;
       }
 
       &-active,
