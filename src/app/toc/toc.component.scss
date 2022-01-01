@@ -3,7 +3,7 @@
 @layer components {
   .stw-toc {
     &-title {
-      @apply text-ellipsis overflow-hidden whitespace-nowrap font-medium mb-3;
+      @apply text-primary-500 text-ellipsis overflow-hidden whitespace-nowrap font-medium mb-3;
     }
     &-list {
       @apply space-x-1 md:space-x-0 md:space-y-1 text-sm;
@@ -29,6 +29,10 @@
     &-horizontal {
       width: calc(100vw - 2rem);
       @apply block overflow-x-auto overflow-y-hidden pb-1;
+
+      .stw-toc-title {
+        @apply hidden;
+      }
 
       .stw-toc-list {
         @apply flex;

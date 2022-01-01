@@ -9,6 +9,7 @@ import { Fragment } from './toc/fragment';
 })
 export class AppComponent {
   @ViewChild('toc') toc!: TocComponent;
+  @ViewChild('tocHeader') tocHeader!: TocComponent;
   @ViewChild('tocContainer') tocContainer!: ElementRef;
 
   title = 'styledictionarytailwindbridge';
@@ -19,6 +20,7 @@ export class AppComponent {
   familyRendered(rendered:boolean) {
     if (rendered) {
       this.toc.addHeaders(this.tocContainer.nativeElement);
+      this.tocHeader.addHeaders(this.tocContainer.nativeElement);
       this._changeDetectorRef.detectChanges();
     }
   }
