@@ -1,10 +1,8 @@
 import { moduleMetadata } from '@storybook/angular';
 import { APP_BASE_HREF, CommonModule } from '@angular/common';
-// also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { TocComponent } from './toc.component';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, NgModule, ViewChild } from '@angular/core';
-import { RouterTestingModule } from '@angular/router/testing';
 import { RouterModule, Routes } from '@angular/router';
 
 @Component({
