@@ -51,3 +51,22 @@ Thumbs.db
 
 # storybook
 documentation.json
+src/stories/button.component.ts
+src/stories/button.css
+src/stories/Button.stories.ts
+src/stories/header.component.ts
+src/stories/header.css
+src/stories/Header.stories.ts
+src/stories/Introduction.stories.mdx
+src/stories/page.component.ts
+src/stories/page.css
+src/stories/Page.stories.ts
+src/stories/User.ts
+src/stories/assets/code-brackets.svg
+src/stories/assets/colors.svg
+src/stories/assets/comments.svg
+src/stories/assets/direction.svg
+src/stories/assets/flow.svg
+src/stories/assets/plugin.svg
+src/stories/assets/repo.svg
+src/stories/assets/stackalt.svg

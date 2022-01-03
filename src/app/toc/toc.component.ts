@@ -14,6 +14,7 @@ export class TocComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() layout: string = "vertical";
 
   activeFragment$ = this.activatedRoute.fragment.pipe(share());
+  navigationStart$!: Subscription;
   navigationEnd$!: Subscription;
   routerEvents$:Observable<any> = this.router.events;
 
@@ -28,6 +29,7 @@ export class TocComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
+    // console.log(this.navigationEnd$)
     this.setFocus();
   }
 

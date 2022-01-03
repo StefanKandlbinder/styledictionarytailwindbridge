@@ -41,7 +41,7 @@
 
     &-vertical {
       height: calc(100vh - var(--stw-spacing-16));
-      @apply overflow-y-auto overflow-x-hidden pr-2;
+      @apply overflow-y-auto overflow-x-hidden pr-2 grow;
 
       &::-webkit-scrollbar {
         @apply w-1
