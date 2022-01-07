@@ -161,5 +161,4 @@ export class TocComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     });
   }
-
 }
