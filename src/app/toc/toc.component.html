@@ -19,7 +19,7 @@
         title="{{ item.title }}"
         [ngClass]="{
           'stw-toc-item-link-active':
-            (activeFragment$ | async) === item.fragment,
+            activeFragment === item.fragment,
           '': false
         }"
         class="stw-toc-item-link"

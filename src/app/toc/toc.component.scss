@@ -13,15 +13,18 @@
     }
 
     &-item-link {
-      @apply text-ellipsis overflow-hidden rounded text-sm px-2 py-1 md:px-1 md:py-1 whitespace-nowrap font-normal transition-colors duration-200 block first-letter:uppercase;
+      &:link,
+      &:active,
+      &:focus,
+      &:focus-visible {
+        @apply text-ellipsis overflow-hidden rounded text-sm px-2 py-1 md:px-1 md:py-1 whitespace-nowrap font-normal transition-colors duration-200 block first-letter:uppercase;
+      }
 
       &:hover {
         @apply font-normal text-gray-100 bg-primary-400;
       }
 
-      &-active,
-      &:focus,
-      &:focus-visible {
+      &-active {
         @apply bg-primary-500 text-gray-100 outline-none;
       }
     }
@@ -40,7 +43,7 @@
     }
 
     &-vertical {
-      height: calc(100vh - var(--stw-spacing-16));
+      // height: calc(100vh - var(--stw-spacing-16));
       @apply overflow-y-auto overflow-x-hidden pr-2 grow;
 
       &::-webkit-scrollbar {

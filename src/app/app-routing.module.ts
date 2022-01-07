@@ -7,7 +7,7 @@ const routes: Routes = [];
   imports: [RouterModule.forRoot(routes, {
     scrollPositionRestoration: 'enabled',
     anchorScrolling: 'enabled',
-    scrollOffset: [0, 164],
+    scrollOffset: [0, 64],
     onSameUrlNavigation: 'reload'
   })],
   exports: [RouterModule]
