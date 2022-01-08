@@ -85,11 +85,13 @@ export class TocComponent implements OnInit, AfterViewInit, OnDestroy {
   setTitle(tocContainer: HTMLElement) {
     let tmp = tocContainer.querySelectorAll("[data-toc-title]")[0] as HTMLElement;
 
-    this.tocTitle = {
-      fragment: tmp.id,
-      name: tmp.nodeName,
-      title: tmp.innerHTML,
-      positionY: tmp.getBoundingClientRect().y
+    if (tmp) {
+      this.tocTitle = {
+        fragment: tmp.id,
+        name: tmp.nodeName,
+        title: tmp.innerHTML,
+        positionY: tmp.getBoundingClientRect().y
+      }
     }
   }
 
