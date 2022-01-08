@@ -1,6 +1,6 @@
 import { AfterViewInit, ChangeDetectorRef, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Location } from '@angular/common'
-import { ActivatedRoute, NavigationEnd, ResolveEnd, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, ResolveEnd, Router, ExtraOptions } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { filter, share } from 'rxjs/operators';
 import { Fragment } from './fragment';
@@ -45,6 +45,7 @@ export class TocComponent implements OnInit, AfterViewInit, OnDestroy {
         this.setFocus(url);
       }
     });
+    console.log(this.router);
   }
 
   ngOnDestroy(): void {

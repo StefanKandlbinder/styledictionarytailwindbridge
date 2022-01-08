@@ -13,15 +13,20 @@
     }
 
     &-item-link {
+      @apply appearance-none text-ellipsis overflow-hidden rounded text-sm px-2 py-1 md:px-1 md:py-1 whitespace-nowrap font-normal transition-colors duration-200 block first-letter:uppercase;
+
       &:link,
       &:active,
+      &:visited
       &:focus,
       &:focus-visible {
-        @apply text-ellipsis overflow-hidden rounded text-sm px-2 py-1 md:px-1 md:py-1 whitespace-nowrap font-normal transition-colors duration-200 block first-letter:uppercase;
+        @apply appearance-none;
       }
 
-      &:hover {
-        @apply font-normal text-gray-100 bg-primary-400;
+      @media (pointer: fine) {
+        &:hover {
+          @apply font-normal text-gray-100 bg-primary-400;
+        }
       }
 
       &-active {
@@ -31,7 +36,7 @@
 
     &-horizontal {
       width: calc(100vw - 2rem);
-      @apply block overflow-x-auto overflow-y-hidden pb-1;
+      @apply block overflow-x-auto overflow-y-hidden pb-1 pt-1;
 
       .stw-toc-title {
         @apply hidden;

@@ -1,13 +1,20 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Router, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    scrollPositionRestoration: 'enabled',
+    // scrollPositionRestoration: 'enabled',
     anchorScrolling: 'enabled',
-    scrollOffset: [0, 64],
+    scrollOffset: (() => {
+      let dataTocOffset = 0;
+      document.querySelectorAll("[data-toc-offset]").forEach(entry => {
+        dataTocOffset += entry.scrollHeight;
+      })
+      console.log(dataTocOffset);
+      return [0, dataTocOffset]
+    }),
     onSameUrlNavigation: 'reload'
   })],
   exports: [RouterModule]
