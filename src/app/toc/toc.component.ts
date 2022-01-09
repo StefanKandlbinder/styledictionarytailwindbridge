@@ -45,7 +45,6 @@ export class TocComponent implements OnInit, AfterViewInit, OnDestroy {
         this.setFocus(url);
       }
     });
-    console.log(this.router);
   }
 
   ngOnDestroy(): void {

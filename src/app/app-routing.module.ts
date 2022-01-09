@@ -12,7 +12,6 @@ const routes: Routes = [];
       document.querySelectorAll("[data-toc-offset]").forEach(entry => {
         dataTocOffset += entry.scrollHeight;
       })
-      console.log(dataTocOffset);
       return [0, dataTocOffset]
     }),
     onSameUrlNavigation: 'reload'
