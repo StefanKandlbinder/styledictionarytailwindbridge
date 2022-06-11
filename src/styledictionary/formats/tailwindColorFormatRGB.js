@@ -11,6 +11,7 @@ module.exports = function ({ dictionary, options }) {
 
   uniqueTypes.map(uniqueType => {
     colors += `  ${uniqueType}: {`;
+    hasItems = false;
 
     colorsArray.map((token) => {
       let value = "--" + token.name;
@@ -23,17 +24,18 @@ module.exports = function ({ dictionary, options }) {
 
       if (uniqueType === type) {
         if (item !== undefined) {
+          hasItems = true;
           colors += `
     ${[item]}: 'rgba(var(${value}) / <alpha-value>)',`
         }
         else if (item === undefined) {
+          hasItems = false;
           colors = colors.slice(0, -3);
-          colors += `
-            : 'rgba(var(${value}) / <alpha-value>)',`
+          colors += `: 'rgba(var(${value}) / <alpha-value>)',`
         }
       }
     })
-    colors += "\n  },\n"
+    hasItems ? colors += "\n  },\n" : colors += "\n"
   })
   colors += "}\n"
 
