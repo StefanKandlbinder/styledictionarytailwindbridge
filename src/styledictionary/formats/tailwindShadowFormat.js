@@ -1,19 +1,17 @@
-const tailwindShadowFormat = function ({ dictionary, options }) {
+module.exports = function ({ dictionary, options }) {
   let shadowsArray = dictionary.allTokens.filter(token => {
     return token.attributes.category === "shadow"
   })
 
-  let shadows = "module.exports = {"
+  let shadows = "module.exports = {\n"
 
   shadowsArray.map((token) => {
     let value = "--" + token.name;
 
-    shadows += `"${token.attributes.type}":"var(${value})",`
+    shadows += `  "${token.attributes.type}": "var(${value})",\n`
   })
 
-  shadows += "}"
+  shadows += "}\n"
 
   return shadows;
 }
-
-module.exports = tailwindShadowFormat;

@@ -1,19 +1,17 @@
-const tailwindFontFamilyFormat = function ({ dictionary, options }) {
+module.exports = function ({ dictionary, options }) {
   let spacingsArray = dictionary.allTokens.filter(token => {
     return token.attributes.type === "family"
   })
 
-  let families = "module.exports = {"
+  let families = "module.exports = { \n"
 
   spacingsArray.map((token) => {
     let value = "--" + token.name;
 
-    families += `${token.attributes.item}:"var(${value})",`
+    families += `  ${token.attributes.item}: "var(${value})",\n`
   })
 
-  families += "}"
+  families += "}\n"
 
   return families;
 }
-
-module.exports = tailwindFontFamilyFormat;

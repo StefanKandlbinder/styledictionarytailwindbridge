@@ -1,1 +1,18 @@
-module.exports = {0:"var(--stw-spacing-0)",1:"var(--stw-spacing-1)",2:"var(--stw-spacing-2)",3:"var(--stw-spacing-3)",4:"var(--stw-spacing-4)",6:"var(--stw-spacing-6)",8:"var(--stw-spacing-8)",10:"var(--stw-spacing-10)",12:"var(--stw-spacing-12)",14:"var(--stw-spacing-14)",16:"var(--stw-spacing-16)",20:"var(--stw-spacing-20)",24:"var(--stw-spacing-24)",30:"var(--stw-spacing-30)",40:"var(--stw-spacing-40)",48:"var(--stw-spacing-48)",}
+module.exports = {
+  0: "var(--stw-spacing-0)",
+  1: "var(--stw-spacing-1)",
+  2: "var(--stw-spacing-2)",
+  3: "var(--stw-spacing-3)",
+  4: "var(--stw-spacing-4)",
+  6: "var(--stw-spacing-6)",
+  8: "var(--stw-spacing-8)",
+  10: "var(--stw-spacing-10)",
+  12: "var(--stw-spacing-12)",
+  14: "var(--stw-spacing-14)",
+  16: "var(--stw-spacing-16)",
+  20: "var(--stw-spacing-20)",
+  24: "var(--stw-spacing-24)",
+  30: "var(--stw-spacing-30)",
+  40: "var(--stw-spacing-40)",
+  48: "var(--stw-spacing-48)",
+}

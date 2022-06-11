@@ -1,19 +1,17 @@
-const tailwindFontWeightFormat = function ({ dictionary, options }) {
+module.exports = function ({ dictionary, options }) {
   let weightsArray = dictionary.allTokens.filter(token => {
     return token.attributes.type === "weight"
   })
 
-  let weights = "module.exports = {"
+  let weights = "module.exports = {\n"
 
   weightsArray.map((token) => {
     let value = "--" + token.name;
 
-    weights += `${token.attributes.item}:"var(${value})",`
+    weights += `  ${token.attributes.item}: "var(${value})",\n`
   })
 
-  weights += "}"
+  weights += "}\n"
 
   return weights;
 }
-
-module.exports = tailwindFontWeightFormat;
