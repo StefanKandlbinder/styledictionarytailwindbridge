@@ -46,5 +46,4 @@ module.exports = {
   transparent: {
     default: 'rgba(var(--stw-color-transparent-default) / <alpha-value>)',
   },
-  error: 'rgba(var(--stw-color-error) / <alpha-value>)',
 }
