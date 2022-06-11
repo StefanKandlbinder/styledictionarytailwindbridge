@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sat, 11 Jun 2022 07:24:23 GMT
+ * Generated on Sat, 11 Jun 2022 08:36:00 GMT
  */
 
 :root {
@@ -54,40 +54,40 @@
   --stw-font-family-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   --stw-font-family-sans: Poppins, sans-serif;
   --stw-color-transparent-default: transparent;
-  --stw-color-gray-900: 70, 70, 70;
-  --stw-color-gray-800: 90, 90, 90;
-  --stw-color-gray-700: 110, 110, 110;
-  --stw-color-gray-600: 130, 130, 130;
-  --stw-color-gray-500: 150, 150, 150;
-  --stw-color-gray-400: 170, 170, 170;
-  --stw-color-gray-300: 190, 190, 190;
-  --stw-color-gray-200: 220, 220, 220;
-  --stw-color-gray-100: 250, 250, 250;
-  --stw-color-warning-900: 255, 72, 0;
-  --stw-color-warning-800: 255, 84, 0;
-  --stw-color-warning-700: 255, 96, 0;
-  --stw-color-warning-600: 255, 109, 0;
-  --stw-color-warning-500: 255, 121, 0;
-  --stw-color-warning-400: 255, 133, 0;
-  --stw-color-warning-300: 255, 145, 0;
-  --stw-color-warning-200: 255, 158, 0;
-  --stw-color-warning-100: 255, 170, 0;
-  --stw-color-accent-900: 20, 116, 111;
-  --stw-color-accent-800: 36, 130, 119;
-  --stw-color-accent-700: 53, 143, 128;
-  --stw-color-accent-600: 70, 157, 137;
-  --stw-color-accent-500: 86, 171, 145;
-  --stw-color-accent-400: 103, 185, 154;
-  --stw-color-accent-300: 120, 198, 163;
-  --stw-color-accent-200: 136, 212, 171;
-  --stw-color-accent-100: 153, 226, 180;
-  --stw-color-primary-900: 3, 4, 94;
-  --stw-color-primary-800: 2, 62, 138;
-  --stw-color-primary-700: 5, 87, 148;
-  --stw-color-primary-600: 0, 119, 182;
-  --stw-color-primary-500: 0, 150, 199;
-  --stw-color-primary-400: 0, 180, 216; /* main hue */
-  --stw-color-primary-300: 72, 202, 228;
-  --stw-color-primary-200: 144, 224, 239;
-  --stw-color-primary-100: 173, 232, 244;
+  --stw-color-gray-900: 70 70 70;
+  --stw-color-gray-800: 90 90 90;
+  --stw-color-gray-700: 110 110 110;
+  --stw-color-gray-600: 130 130 130;
+  --stw-color-gray-500: 150 150 150;
+  --stw-color-gray-400: 170 170 170;
+  --stw-color-gray-300: 190 190 190;
+  --stw-color-gray-200: 220 220 220;
+  --stw-color-gray-100: 250 250 250;
+  --stw-color-warning-900: 255 72 0;
+  --stw-color-warning-800: 255 84 0;
+  --stw-color-warning-700: 255 96 0;
+  --stw-color-warning-600: 255 109 0;
+  --stw-color-warning-500: 255 121 0;
+  --stw-color-warning-400: 255 133 0;
+  --stw-color-warning-300: 255 145 0;
+  --stw-color-warning-200: 255 158 0;
+  --stw-color-warning-100: 255 170 0;
+  --stw-color-accent-900: 20 116 111;
+  --stw-color-accent-800: 36 130 119;
+  --stw-color-accent-700: 53 143 128;
+  --stw-color-accent-600: 70 157 137;
+  --stw-color-accent-500: 86 171 145;
+  --stw-color-accent-400: 103 185 154;
+  --stw-color-accent-300: 120 198 163;
+  --stw-color-accent-200: 136 212 171;
+  --stw-color-accent-100: 153 226 180;
+  --stw-color-primary-900: 3 4 94;
+  --stw-color-primary-800: 2 62 138;
+  --stw-color-primary-700: 5 87 148;
+  --stw-color-primary-600: 0 119 182;
+  --stw-color-primary-500: 0 150 199;
+  --stw-color-primary-400: 0 180 216; /* main hue */
+  --stw-color-primary-300: 72 202 228;
+  --stw-color-primary-200: 144 224 239;
+  --stw-color-primary-100: 173 232 244;
 }

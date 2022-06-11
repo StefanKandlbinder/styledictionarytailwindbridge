@@ -24,35 +24,17 @@ module.exports = function ({ dictionary, options }) {
       if (uniqueType === type) {
         if (item !== undefined) {
           colors += `
-    ${[item]}: ({ opacityVariable, opacityValue }) => {
-      if (opacityValue !== undefined) {
-        ${opacityValue}
-      }
-      if (opacityVariable !== undefined) {
-        ${opacityVariable}
-      }
-        ${variable}
-    },`
+    ${[item]}: 'rgba(var(${value}) / <alpha-value>)',`
         }
         else if (item === undefined) {
           colors = colors.slice(0, -3);
           colors += `
-            :
-            ({ opacityVariable, opacityValue }) => {
-              if (opacityValue !== undefined) {
-                ${opacityValue}
-              }
-              if (opacityVariable !== undefined) {
-                ${opacityVariable}
-              }
-                ${variable}
-            `
+            : 'rgba(var(${value}) / <alpha-value>)',`
         }
       }
     })
     colors += "\n  },\n"
   })
-  // console.log(colors);
   colors += "}\n"
 
   return colors;

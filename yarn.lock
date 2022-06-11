@@ -13760,7 +13760,7 @@ synchronous-promise@^2.0.15:
   resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.15.tgz#07ca1822b9de0001f5ff73595f3d08c4f720eb8e"
   integrity sha512-k8uzYIkIVwmT+TcglpdN50pS2y1BDcUnBPK9iJeGu0Pl1lOI8pD6wtzgw91Pjpe+RxtTncw32tLxs/R0yNL2Mg==
 
-tailwindcss@^3.0.5:
+tailwindcss@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.1.2.tgz#b5607d17adb6cbb11a13738cc5fdf3e5527dcd7a"
   integrity sha512-yJ6L5s1U5AeS5g7HHy212zdQfjwD426FBfm59pet/JsyneuZuD4C2W7PpJEg4ppisiB21uLqtNagv8KXury3+Q==
@@ -14220,10 +14220,15 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
-typescript@^4.0.3, typescript@~4.7.3:
+typescript@^4.0.3:
   version "4.7.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.3.tgz#8364b502d5257b540f9de4c40be84c98e23a129d"
   integrity sha512-WOkT3XYvrpXx4vMMqlD+8R8R37fZkjyLGlxavMc4iB8lrl8L0DeTcHbYgw/v0N/z9wAFsgBhcsF0ruoySS22mA==
+
+typescript@~4.4.3:
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.4.tgz#2cd01a1a1f160704d3101fd5a58ff0f9fcb8030c"
+  integrity sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA==
 
 ua-parser-js@^0.7.30:
   version "0.7.31"
