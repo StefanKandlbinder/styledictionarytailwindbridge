@@ -15,11 +15,10 @@
       <a
         [routerLink]="'.'"
         [fragment]="item.fragment"
-        attr.data-toc-id="{{item.fragment}}"
+        attr.data-toc-id="{{ item.fragment }}"
         title="{{ item.title }}"
         [ngClass]="{
-          'stw-toc-item-link-active':
-            activeFragment === item.fragment,
+          'stw-toc-item-link-active': activeFragment === item.fragment,
           '': false
         }"
         class="stw-toc-item-link"
