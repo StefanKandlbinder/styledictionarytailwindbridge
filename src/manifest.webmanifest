@@ -353,6 +353,12 @@
       "sizes": "48x48"
     },
     {
+      "src": "assets/icons/android/maskable_icon_x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
       "src": "assets/icons/ios/16.png",
       "sizes": "16x16"
     },
